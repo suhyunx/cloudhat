@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="first.war">
+    <root id="archive" name="stu.war">
       <element id="artifact" artifact-name="stu:war exploded" />
     </root>
   </artifact>

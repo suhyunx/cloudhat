@@ -377,7 +377,7 @@
     <build>
     	<defaultGoal>install</defaultGoal>
 		<directory>${basedir}/target</directory>
-		<finalName>first</finalName>
+		<finalName>stu</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
