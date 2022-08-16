@@ -37,7 +37,7 @@ public class EditorContorller {
 	MultipartFile file = multiFile.getFile("upload");
 	if(file != null){
 		if(file.getSize() > 0 && StringUtils.isNotBlank(file.getName())){
-			if(file.getContentType().toLowerCase().startsWith("image/")){
+			//if(file.getContentType().toLowerCase().startsWith("image/")){
 				try{
 					String fileName = file.getOriginalFilename();
 					
@@ -85,9 +85,9 @@ public class EditorContorller {
                    }
                    if(printWriter != null){
                        printWriter.close();
-                   }		
+                   }
 				}
-			}
+
 		}
 	}
 	

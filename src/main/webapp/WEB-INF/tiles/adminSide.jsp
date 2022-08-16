@@ -17,17 +17,17 @@
 <body>
 	
 	<!-- /.navbar-header -->
-	<div class="navbar-default sidebar" role="navigation" style="width: 250px;">
-		<div style="width: 200px;height: 150px;background-color: #2E9AFE;text-align: center;">
+	<div class="navbar-default sidebar" role="navigation" style="width: 230px;">
+		<div style="width: 180px;height: 130px;background-color: #2E9AFE;text-align: center;">
 		<br />
-		<h2>관리자페이지</h2>
+		<h2>관리자</h2>
 		<p>Admin</p>
 		</div>
-		<div style="width: 200px; height: 80px; background-color: #F8F8F8;">
+		<div style="width: 180px; height: 80px; background-color: #F8F8F8;">
 			<br />
 			<p style="text-align: center;"><a href="#">로그아웃</a>하시겠습니까</p>
 		</div>
-		<div class="sidebar-nav navbar-collapse">
+		<div class="sidebar-nav navbar-collapse" style="width:180px;">
 			<ul class="nav" id="side-menu">
 				<li><a href="/stu/main.do" style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">쇼핑몰로 이동</b> 
