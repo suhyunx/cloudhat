@@ -235,7 +235,7 @@ function fn_listCallBack(data){
 					+ "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>" + value.COUPON_S_VALIDITY +"&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;"+ value.COUPON_E_VALIDITY + "</td>"
 				    + "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>" + value.COUPON_STATE + "</td>"
 				    + "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>"
-				    	+ "<a href='#this' name='copy'><img src='http://13.124.237.134:8080/stu/img/copy.jpg' width='30px' height='30px' border='0' alt='right'></a>"
+				    	+ "<a href='#this' name='copy'><img src='/stu/img/copy.jpg' width='30px' height='30px' border='0' alt='right'></a>"
 				    	+ "<input type='hidden' id='COUPON_NO' value='"+value.COUPON_NO+"'>"
 				    + "</td>"
 			    + "</tr>";
