@@ -285,7 +285,7 @@ p {
 	
 	<div style="width:100%; position:relative; left:calc(50% - 600px); height:600px; display:inline">
 		
-		<div style="float:left; width:500;">
+		<div style="float:left; width:500px;">
 			<table border="0">
 				<tr>
 					<td><img src="/stu/file/${list.GOODS_THUMBNAIL}" width="500"
@@ -294,7 +294,7 @@ p {
 			</table>
 		</div>
 
-		<div style="float:left; margin-left:30px; width:682;">
+		<div style="float:left; margin-left:30px; width:682px;">
 			<table border="0">
 
 				<tr>
@@ -333,7 +333,7 @@ p {
 
 				<tr>
 					<td id="price"
-						style="font-weight: 600px; font-Size: 24px; line-height: 42px;">
+						style="font-weight: 600; font-Size: 24px; line-height: 42px;">
 						<fmt:formatNumber value="${list.GOODS_SELL_PRICE}" pattern="#,###" />원
 					</td>
 				</tr>
@@ -444,27 +444,27 @@ p {
 	
 
 
-	<div style="clear: both;"></div>
+<%--	<div style="clear: both;"></div>--%>
 
-	<br><br><br><br><br>
-	<div align="center">
-		<ul class="nav nav-tabs" id="myTab" role="tablist" style="width: 60%">
-			<li class="nav-item" role="presentation" style="width: 25%" id="f1"><a
-				class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
-				role="tab" aria-controls="home" aria-selected="true" onClick="fnMove(1)">상세정보</a></li>
-			<li class="nav-item" role="presentation" style="width: 25%"><a
-				 id="profile-tab"  href="#profile"
-				role="tab" aria-controls="profile" aria-selected="false" onClick="fnMove(2)">상품문의</a></li>
-			<li class="nav-item" role="presentation" style="width: 25%" ><a
-				 id="contact-tab"  href="#contact"
-				role="tab" aria-controls="contact" aria-selected="false" onClick="fnMove(3)">쇼핑가이드</a></li>
-			<li class="nav-item" role="presentation" style="width: 25%"><a
-				 id="contact-tab"  href="#re"
-				role="tab" aria-controls="re" aria-selected="false" onClick="fnMove(4)">상품평</a></li>
-		</ul>
-		<div class="tab-content" id="myTabContent">
-			<div class="tab-pane fade show active" id="home" role="tabpanel"
-				aria-labelledby="home-tab">${list.GOODS_CONTENT}</div>
+<%--	<br><br><br><br><br>--%>
+<%--	<div align="center">--%>
+<%--		<ul class="nav nav-tabs" id="myTab" role="tablist" style="width: 60%">--%>
+<%--			<li class="nav-item" role="presentation" style="width: 25%" id="f1"><a--%>
+<%--				class="nav-link active" id="home-tab" data-toggle="tab" href="#home"--%>
+<%--				role="tab" aria-controls="home" aria-selected="true" onClick="fnMove(1)">상세정보</a></li>--%>
+<%--			<li class="nav-item" role="presentation" style="width: 25%"><a--%>
+<%--				 id="profile-tab"  href="#profile"--%>
+<%--				role="tab" aria-controls="profile" aria-selected="false" onClick="fnMove(2)">상품문의</a></li>--%>
+<%--			<li class="nav-item" role="presentation" style="width: 25%" ><a--%>
+<%--				 id="contact-tab"  href="#contact"--%>
+<%--				role="tab" aria-controls="contact" aria-selected="false" onClick="fnMove(3)">쇼핑가이드</a></li>--%>
+<%--			<li class="nav-item" role="presentation" style="width: 25%"><a--%>
+<%--				 id="contact-tab"  href="#re"--%>
+<%--				role="tab" aria-controls="re" aria-selected="false" onClick="fnMove(4)">상품평</a></li>--%>
+<%--		</ul>--%>
+<%--		<div class="tab-content" id="myTabContent">--%>
+<%--			<div class="tab-pane fade show active" id="home" role="tabpanel"--%>
+<%--				aria-labelledby="home-tab">${list.GOODS_CONTENT}</div>--%>
 			<!-- 상세정보 -->
 
 	</div>

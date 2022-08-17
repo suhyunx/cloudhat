@@ -14,7 +14,8 @@
 			WHERE 
 				M.MEMBER_NO = #{MEMBER_NO}
 			AND P.MEMBER_NO = M.MEMBER_NO
-            AND P.POINT_NO = (SELECT MAX(POINT_NO) FROM POINT)
+            AND P.POINT_NO = (SELECT MAX(POINT_NO) FROM POINT where member_no = #{MEMBER_NO})
+
 		]]>
 	</select>
 	
@@ -96,7 +97,7 @@
 				ORDER_LIST
 			WHERE 
 				MEMBER_NO = #{MEMBER_NO}
-            AND ORDER_NO = (SELECT MAX(ORDER_NO) FROM ORDER_LIST)
+            AND ORDER_NO = (SELECT MAX(ORDER_NO) FROM ORDER_LIST where member_no = #{MEMBER_NO})
 		</selectKey>
 		<![CDATA[
 			INSERT INTO ORDER_DETAIL

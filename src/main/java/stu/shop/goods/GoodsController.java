@@ -449,7 +449,7 @@ public class GoodsController {
 		commandMap.remove("SELECT_BASKET_NO");
 		commandMap.put("SELECT_BASKET_NO", list0.get(0).get("BASKET_NO"));
 
-		List<Map<String, Object>> list = basketService.basketSelectList(commandMap, request); // 장바구니에 있는 정보들 
+		List<Map<String, Object>> list = basketService.basketSelectList(commandMap, request); // 장바구니에 있는 정보들
 
 		Map<String, Object> map = orderService.orderMemberInfo(commandMap, request); // 회원의 정보
 

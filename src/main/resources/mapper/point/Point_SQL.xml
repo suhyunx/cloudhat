@@ -12,7 +12,7 @@
 				POINT
 			WHERE 
 				MEMBER_NO = #{MEMBER_NO}
-            AND POINT_NO = (SELECT MAX(POINT_NO) FROM POINT)
+            AND POINT_NO = (SELECT MAX(POINT_NO) FROM POINT where member_no = #{MEMBER_NO})
 		</selectKey>
 		<![CDATA[
 			INSERT INTO POINT
@@ -43,7 +43,7 @@
 				POINT
 			WHERE 
 				MEMBER_NO = #{MEMBER_NO}
-            AND POINT_NO = (SELECT MAX(POINT_NO) FROM POINT)
+            AND POINT_NO = (SELECT MAX(POINT_NO) FROM POINT where member_no = #{MEMBER_NO})
 		</selectKey>
 		<![CDATA[
 			INSERT INTO POINT

@@ -140,7 +140,7 @@ h1 {
 						<option value="gmail.com">gmail.com</option>
 						<option value="nate.com">nate.com</option>
 					</select>
-					<button type="button" class="btn btn-default" id="isCheck_Email">인증</button>
+<%--					<button type="button" class="btn btn-default" id="isCheck_Email">인증</button>--%>
 					<input type="hidden" id="isEmailCheck" value="1">
 				</div>
 				<div id="email_check"></div>

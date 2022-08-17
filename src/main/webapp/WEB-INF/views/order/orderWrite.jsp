@@ -47,189 +47,191 @@ h1 {
 	<!--
 <script type="text/javascript">
 	-->
+<script>
+	//기본 주문금액 계산
+	function fn_allPrice(){
 
-	<script>
-//기본 주문금액 계산
-function fn_allPrice(){
-	
-	var array1 = document.getElementsByName("goods_sell_price");
-	var array2 = document.getElementsByName("basket_goods_amount");
-	var array3 = document.getElementsByName("ORDER_DETAIL_PRICE");
-	var array4 = document.getElementsByName("ORDER_DISCOUNT_APPLY");
-	
-	var len = array2.length;
-	var hap = 0;
-	for (var i=0; i<len; i++){
-		var sell = array1[i].value;
-		var amt = array2[i].value;
-		var pri = Number(sell)*Number(amt); //각 상품별 주문금액
-		hap = Number(hap)+Number(pri); //주문금액 총합 구하기
-		array3[i].value = pri;	
-		array4[i].value = pri;	
+		let array1 = document.getElementsByName("goods_sell_price");
+		var array2 = document.getElementsByName("basket_goods_amount");
+		var array3 = document.getElementsByName("ORDER_DETAIL_PRICE");
+		var array4 = document.getElementsByName("ORDER_DISCOUNT_APPLY");
+
+		var len = array2.length;
+		var hap = 0;
+		for (var i=0; i<len; i++){
+			var sell = array1[i].value;
+			var amt = array2[i].value;
+			var pri = Number(sell)*Number(amt); //각 상품별 주문금액
+			hap = Number(hap)+Number(pri); //주문금액 총합 구하기
+			array3[i].value = pri;
+			array4[i].value = pri;
+		}
+		var fee = document.getElementById("ORDER_FEE").value;
+		pay = Number(hap)+Number(fee);
+
+		document.getElementById("ORDER_TOTAL_ORDER_PRICE").value = hap; //총주문금액
+		document.getElementById("ORDER_TOTAL_PAY_PRICE").value = pay; //(최초,할인들어가기전)최종결제금액
+		document.getElementById("pay_price1").value = pay; //결제예정금액(바꿔야됨)
+
+		var array7 = document.getElementsByName("member_grade");
+		var grade = array7[0].value;
+		var val = 0;
+		if("NOMAL" == grade){
+			val=0.03;
+		}else if("GOLD" == grade){
+			val=0.05;
+		}else{
+			val=0.1;
+		}
+		var point = Number(hap)*Number(val); //등급별 적립율
+		document.getElementById("ORDER_SAVE_POINT").value = point; //할인과 상관없이 주문금액별 적립
 	}
-	var fee = document.getElementById("ORDER_FEE").value;
-	pay = Number(hap)+Number(fee);
-	
-	document.getElementById("ORDER_TOTAL_ORDER_PRICE").value = hap; //총주문금액
-	document.getElementById("ORDER_TOTAL_PAY_PRICE").value = pay; //(최초,할인들어가기전)최종결제금액
-	document.getElementById("pay_price1").value = pay; //결제예정금액(바꿔야됨)
-	
-	var array7 = document.getElementsByName("member_grade");
-	var grade = array7[0].value;
-	var val = 0;
-	if("NOMAL" == grade){
-		val=0.03;
-	}else if("GOLD" == grade){
-		val=0.05;
-	}else{
-		val=0.1;
+	//주문자정보와 동일
+	function fn_chkinfo(){
+		var chk = document.getElementById("chkinfo").checked;
+		if(chk==true){
+			document.getElementById("ORDER_NAME").value = "${map.MEMBER_NAME}";
+			document.getElementById("ORDER_PHONE").value = "${map.MEMBER_PHONE}";
+			document.getElementById("ORDER_ZIPCODE").value = "${map.MEMBER_ZIPCODE}";
+			document.getElementById("ORDER_ADDR1").value = "${map.MEMBER_ADDR1}";
+			document.getElementById("ORDER_ADDR2").value = "${map.MEMBER_ADDR2}";
+		}else if(chk==false){
+			document.getElementById("ORDER_NAME").value = "";
+			document.getElementById("ORDER_PHONE").value = "";
+			document.getElementById("ORDER_ZIPCODE").value = "";
+			document.getElementById("ORDER_ADDR1").value = "";
+			document.getElementById("ORDER_ADDR2").value = "";
+		}
 	}
-	var point = Number(hap)*Number(val); //등급별 적립율
-	document.getElementById("ORDER_SAVE_POINT").value = point; //할인과 상관없이 주문금액별 적립
-}
 
-//주문자정보와 동일
-function fn_chkinfo(){
-	var chk = document.getElementById("chkinfo").checked;
-	if(chk==true){
-		document.getElementById("ORDER_NAME").value = "${map.MEMBER_NAME}";
-		document.getElementById("ORDER_PHONE").value = "${map.MEMBER_PHONE}";
-		document.getElementById("ORDER_ZIPCODE").value = "${map.MEMBER_ZIPCODE}";
-		document.getElementById("ORDER_ADDR1").value = "${map.MEMBER_ADDR1}";
-		document.getElementById("ORDER_ADDR2").value = "${map.MEMBER_ADDR2}";
-	}else if(chk==false){
-		document.getElementById("ORDER_NAME").value = "";
-		document.getElementById("ORDER_PHONE").value = "";
-		document.getElementById("ORDER_ZIPCODE").value = "";
-		document.getElementById("ORDER_ADDR1").value = "";
-		document.getElementById("ORDER_ADDR2").value = "";
-	}
-}
+</script>
+<script>
 
-//쿠폰, 포인트 사용
-function fn_price(){ 
-	var f = document.orderWrite;
-	var hap_buy = Number(f.ORDER_TOTAL_ORDER_PRICE.value);  //총 주문금액
-	var u_p = ${map.POINT_TOTAL}; //보유포인트
-	var o_point = Number(f.ORDER_USE_POINT.value); //사용할포인트
-	var a = f.COUPON_VALUE.value; // 할인쿠폰 값
 
-	var sum_point = u_p - o_point;  // 남은 포인트(보유포인트-사용할포인트)
-	var hap_discount= hap_buy*(a/100); // 쿠폰할인값
-	var cp_buy = (hap_buy-hap_discount); // 쿠폰할인만 한 가격
-	var sum_buy = (hap_buy-hap_discount)-o_point; // 주문금액-쿠폰할인-포인트사용(최종결제금액)
 
-	var array = document.getElementsByName("ORDER_DETAIL_PRICE");
-	var array2 = document.getElementsByName("COUPON_DISCOUNT");
-	var array3 = document.getElementsByName("ORDER_DISCOUNT_APPLY");
-	var len = array.length;
-	for (var i=0; i<len; i++){
-		var COUPON_DISCOUNT = array[i].value*(a/100);
-		array2[i].value = COUPON_DISCOUNT;
-		array3[i].value = Number(array[i].value)-Number(array2[i].value);
-	}
-	if(u_p < o_point ){
+	//쿠폰, 포인트 사용
+	function fn_price(){
+		var f = document.orderWrite;
+		var hap_buy = Number(f.ORDER_TOTAL_ORDER_PRICE.value);  //총 주문금액
+		var u_p = ${map.POINT_TOTAL}; //보유포인트
+		var o_point = Number(f.ORDER_USE_POINT.value); //사용할포인트
+		var a = f.COUPON_VALUE.value; // 할인쿠폰 값
+
+		var sum_point = u_p - o_point;  // 남은 포인트(보유포인트-사용할포인트)
+		var hap_discount= hap_buy*(a/100); // 쿠폰할인값
+		var cp_buy = (hap_buy-hap_discount); // 쿠폰할인만 한 가격
+		var sum_buy = (hap_buy-hap_discount)-o_point; // 주문금액-쿠폰할인-포인트사용(최종결제금액)
+
+		var array = document.getElementsByName("ORDER_DETAIL_PRICE");
+		var array2 = document.getElementsByName("COUPON_DISCOUNT");
+		var array3 = document.getElementsByName("ORDER_DISCOUNT_APPLY");
+		var len = array.length;
+		for (var i=0; i<len; i++){
+			var COUPON_DISCOUNT = array[i].value*(a/100);
+			array2[i].value = COUPON_DISCOUNT;
+			array3[i].value = Number(array[i].value)-Number(array2[i].value);
+		}
+		if(u_p < o_point ){
 			alert("사용가능 마일리지를 확인해주세요!");
 			return false;
-	}
-	if(o_point > cp_buy){
+		}
+		if(o_point > cp_buy){
 			alert("결제금액 보다 큽니다!");
 			location.reload(true);
 			return false;
-	}
-	f.discount.value = hap_discount+o_point; //총 할일된 금액
-	f.pay_price1.value = sum_buy+3000; //배송비를 포함한 결제금액
-	f.ORDER_TOTAL_PAY_PRICE.value = sum_buy+3000;
-	f.POINT_TOTAL.value = sum_point; //사용하고 남은 보유 포인트금액
-	//선택된 쿠폰 인덱스
-	var index = ($("#COUPON_VALUE option").index("#COUPON_VALUE option:selected"))*(-1)-1;
-	var array9 = document.getElementsByName("COUPON_STATUS_NO");
-	var array11 = document.getElementsByName("COUPON_NO");
-	f.COUPON_STATUS_NO_1.value = array9[index].value;
-	f.COUPON_NO_1.value = array11[index].value;
-}
-
-//주문완료
-function fn_order_pay(){
-	
-		var f = document.orderWrite;
-		
- 		if( f.ORDER_NAME.value=="" ){
- 			alert("주문자 이름을 입력해주세요.");
- 			f.ORDER_NAME.focus();
- 			return false;
- 		}
- 		if( f.ORDER_PHONE.value==""){
- 			alert("전화번호를 입력해주세요.");
- 			f.ORDER_PHONE.focus(); //커서자동클릭
- 			return false;
- 		}
- 		if( f.ORDER_ZIPCODE.value=="" || f.ORDER_ADDR1.value=="" || f.ORDER_ADDR2.value==""){
- 			alert("주소를 정확히 입력해주세요.");
- 			return false;
- 		}
- 		if( document.getElementById("OPTION1").checked==false && document.getElementById("OPTION2").checked==false){
- 			alert("결제방법을 선택해주세요.");
- 			return false;
- 		}
- 		if( f.ORDER_PAY_BANK.value=="" ){
- 			alert("결제은행을 입력해주세요.");
- 			f.ORDER_PAY_BANK.focus();
- 			return false;
- 		}
- 		if( f.ORDER_PAY_NAME.value==""){
- 			alert("결제자명을 입력해주세요.");
- 			f.ORDER_PAY_NAME.focus(); //커서자동클릭
- 			return false;
- 		}
- 		if( document.getElementById("orderChk").checked==false){
- 			alert("서비스 약관에 동의해주세요.");
- 			return false;
- 		}
-		
-		f.submit();
-}
-
-//주소 찾기
-function findAddr() {
-	new daum.Postcode( {
-		oncomplete : function(data) {
-			// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-			// 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
-			// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-			var roadAddr = data.roadAddress; // 도로명 주소 변수
-			var extraRoadAddr = ''; // 참고 항목 변수
-
-			// 법정동명이 있을 경우 추가한다. (법정리는 제외)
-			// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-			if (data.bname !== ''
-					&& /[동|로|가]$/g.test(data.bname)) {
-				extraRoadAddr += data.bname;
-			}
-			// 건물명이 있고, 공동주택일 경우 추가한다.
-			if (data.buildingName !== ''
-					&& data.apartment === 'Y') {
-				extraRoadAddr += (extraRoadAddr !== '' ? ', '
-						+ data.buildingName : data.buildingName);
-			}
-			// 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-			if (extraRoadAddr !== '') {
-				extraRoadAddr = ' (' + extraRoadAddr + ')';
-			}
-			// 우편번호와 주소 정보를 해당 필드에 넣는다.
-			document.getElementById('ORDER_ZIPCODE').value = data.zonecode;
-			document.getElementById("ORDER_ADDR1").value = roadAddr
-					+ data.jibunAddress;
-			// 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
-			if (roadAddr !== '') {
-				document.getElementById("ORDER_ADDR2").value = extraRoadAddr;
-			} else {
-				document.getElementById("ORDER_ADDR2").value = '';
-			}
 		}
-	}).open();
-}
+		f.discount.value = hap_discount+o_point; //총 할일된 금액
+		f.pay_price1.value = sum_buy+3000; //배송비를 포함한 결제금액
+		f.ORDER_TOTAL_PAY_PRICE.value = sum_buy+3000;
+		f.POINT_TOTAL.value = sum_point; //사용하고 남은 보유 포인트금액
+		//선택된 쿠폰 인덱스
+		var index = ($("#COUPON_VALUE option").index("#COUPON_VALUE option:selected"))*(-1)-1;
+		var array9 = document.getElementsByName("COUPON_STATUS_NO");
+		var array11 = document.getElementsByName("COUPON_NO");
+		f.COUPON_STATUS_NO_1.value = array9[index].value;
+		f.COUPON_NO_1.value = array11[index].value;
+	}
 
+	//주문완료
+	function fn_order_pay(){
+
+		var f = document.orderWrite;
+
+		if( f.ORDER_NAME.value=="" ){
+			alert("주문자 이름을 입력해주세요.");
+			f.ORDER_NAME.focus();
+			return false;
+		}
+		if( f.ORDER_PHONE.value==""){
+			alert("전화번호를 입력해주세요.");
+			f.ORDER_PHONE.focus(); //커서자동클릭
+			return false;
+		}
+		if( f.ORDER_ZIPCODE.value=="" || f.ORDER_ADDR1.value=="" || f.ORDER_ADDR2.value==""){
+			alert("주소를 정확히 입력해주세요.");
+			return false;
+		}
+		if( document.getElementById("OPTION1").checked==false && document.getElementById("OPTION2").checked==false){
+			alert("결제방법을 선택해주세요.");
+			return false;
+		}
+		if( f.ORDER_PAY_BANK.value=="" ){
+			alert("결제은행을 입력해주세요.");
+			f.ORDER_PAY_BANK.focus();
+			return false;
+		}
+		if( f.ORDER_PAY_NAME.value==""){
+			alert("결제자명을 입력해주세요.");
+			f.ORDER_PAY_NAME.focus(); //커서자동클릭
+			return false;
+		}
+		if( document.getElementById("orderChk").checked==false){
+			alert("서비스 약관에 동의해주세요.");
+			return false;
+		}
+
+		f.submit();
+	}
+
+	//주소 찾기
+	function findAddr() {
+		new daum.Postcode({
+			oncomplete : function(data) {
+				// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+				// 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+				// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+				var roadAddr = data.roadAddress; // 도로명 주소 변수
+				var extraRoadAddr = ''; // 참고 항목 변수
+
+				// 법정동명이 있을 경우 추가한다. (법정리는 제외)
+				// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+				if (data.bname !== ''
+						&& /[동|로|가]$/g.test(data.bname)) {
+					extraRoadAddr += data.bname;
+				}
+				// 건물명이 있고, 공동주택일 경우 추가한다.
+				if (data.buildingName !== ''
+						&& data.apartment === 'Y') {
+					extraRoadAddr += (extraRoadAddr !== '' ? ', '
+							+ data.buildingName : data.buildingName);
+				}
+				// 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+				if (extraRoadAddr !== '') {
+					extraRoadAddr = ' (' + extraRoadAddr + ')';
+				}
+				// 우편번호와 주소 정보를 해당 필드에 넣는다.
+				document.getElementById('ORDER_ZIPCODE').value = data.zonecode;
+				document.getElementById("ORDER_ADDR1").value = roadAddr
+						+ data.jibunAddress;
+				// 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
+				if (roadAddr !== '') {
+					document.getElementById("ORDER_ADDR2").value = extraRoadAddr;
+				} else {
+					document.getElementById("ORDER_ADDR2").value = '';
+				}
+			}
+		}).open();
+	}
 </script>
 
 
@@ -489,7 +491,7 @@ function findAddr() {
             </div>
       
      </form>
-
+	</div>
      
-  </body>
+	</body>
 </html>
