@@ -435,7 +435,7 @@ p {
 				onclick="fn_GoodsOrder()">구매하기</button>
 			<br>
 
-			<!-- <button id="update" onclick="fn_update()">수정하기</button> -->
+<%--			<button id="update" onclick="fn_update()">수정하기</button>--%>
 		
 		</div>
 	</div>
