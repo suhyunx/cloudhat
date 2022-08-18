@@ -134,11 +134,11 @@ h1 {
 						name="MEMBER_EMAIL" placeholder="이메일을 입력하세요">
 					<select class="form-control" name="MEMBER_EMAIL2" id="MEMBER_EMAIL2">
 						<option value="">직접입력</option>
-						<option value="naver.com">naver.com</option>
-						<option value="daum.net">daum.net</option>
-						<option value="hanmail.net">hanmail.net</option>
-						<option value="gmail.com">gmail.com</option>
-						<option value="nate.com">nate.com</option>
+						<option value="naver.com">@naver.com</option>
+						<option value="daum.net">@daum.net</option>
+						<option value="hanmail.net">@hanmail.net</option>
+						<option value="gmail.com">@gmail.com</option>
+						<option value="nate.com">@nate.com</option>
 					</select>
 <%--					<button type="button" class="btn btn-default" id="isCheck_Email">인증</button>--%>
 					<input type="hidden" id="isEmailCheck" value="1">
