@@ -4,7 +4,7 @@
 <meta name="google-signin-client_id" content="840345488051-t7d9q5tg8he8kt3om4dmlovpjom64m3q.apps.googleusercontent.com">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/stu/css/login.css">
+<link rel="stylesheet" href="/css/login.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -70,19 +70,19 @@ h1 {
 	<div id="loginform">
 		<h3 class="contents">로그인</h3>
 		<div class="logintable">
-		<form action="/stu/loginAction.do" method="POST" id="frm">
+		<form action="/loginAction.do" method="POST" id="frm">
 			<input type="text" class="form-control" name="MEMBER_ID"
 				id="MEMBER_ID" placeholder="아이디">
 			<input type="password" class="form-control" name="MEMBER_PASSWD"
 				id="MEMBER_PASSWD" placeholder="비밀번호">
-			<a href="/stu/findPw.do">비밀번호
+			<a href="/findPw.do">비밀번호
 					재설정</a>
-			<a href="/stu/findId.do">아이디
+			<a href="/findId.do">아이디
 					찾기</a>
 			<button type="submit" class="defaultBtn loginBtn" id="login">로그인</button>
 		</form>
 			<p>
-			아직 회원이 아니신가요? <a href="/stu/joinForm.do">회원가입하기</a>
+			아직 회원이 아니신가요? <a href="/joinForm.do">회원가입하기</a>
 
 		</p>
 			<!-- 소셜 로그인 버튼  -->
@@ -180,7 +180,7 @@ $(document).ready(function() {
 
 <%--var naverLogin = new naver.LoginWithNaverId({--%>
 <%--	clientId : "N7cehmsKQVMvrJ4lCsgv",--%>
-<%--	callbackUrl : "http://localhost:8080/stu/loginCallback.do",--%>
+<%--	callbackUrl : "http://localhost:8080/loginCallback.do",--%>
 <%--	isPopup : true,--%>
 <%--	loginButton : {--%>
 <%--		color : "green",--%>

@@ -12,16 +12,16 @@
 <title>장바구니 목록</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
 <!-- 부가적인 테마 -->
-<link rel="stylesheet" href="/stu/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/stu/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="/stu/js/common.js" charset="utf-8"></script>
+<script src="/js/common.js" charset="utf-8"></script>
 
 <script type="text/javascript">
 
@@ -97,16 +97,16 @@ function fn_likeDelete(index){
 					<input type="hidden" name="goods_no" value="${row.GOODS_NO }">
 						<tr>
                   			<td>
-                  				<img src='/stu/file/${row.GOODS_THUMBNAIL }' width="70px" height="70px">
+                  				<img src='/file/${row.GOODS_THUMBNAIL }' width="70px" height="70px">
                   			</td>
 							<td style="text-align:left">
-				  				<a href="/stu/shop/goodsDetail.do?IDX=${row.GOODS_NO }">${row.GOODS_NAME }</a>
+				  				<a href="/shop/goodsDetail.do?IDX=${row.GOODS_NO }">${row.GOODS_NAME }</a>
 				  			</td>
 				  			<td style="text-align:center">
                   				${row.GOODS_SELL_PRICE } 원
                   			</td>
 							<td style="text-align:center">
-                  				<input type="button" name="goodsDetail" value="구매" onclick="location.href='/stu/shop/goodsDetail.do?IDX=${row.GOODS_NO }'"><br>
+                  				<input type="button" name="goodsDetail" value="구매" onclick="location.href='/shop/goodsDetail.do?IDX=${row.GOODS_NO }'"><br>
                   				<input type="button" name="likeDelete" value="삭제" onclick="fn_likeDelete(${status.index})">
                   			</td>
 						</tr>

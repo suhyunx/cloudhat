@@ -320,10 +320,10 @@ h1 {
 				 <%-- 총 ${TOTAL} 개의 상품이 있습니다 --%> 
 			</div>
 			</td>
-			<td class="font1"><a href="/stu/shop/goodsList/${category}/NewItem.do">신상품순</a></td> <td>|</td>
-			<td class="font1"><a href="/stu/shop/goodsList/${category}/favorite.do">인기상품순</a></td> <td>|</td>
-			<td class="font1"><a href="/stu/shop/goodsList/${category}/low.do">낮은가격순</a></td> <td>|</td>
-			<td class="font1"><a href="/stu/shop/goodsList/${category}/high.do">높은가격순</a></td> 
+			<td class="font1"><a href="/shop/goodsList/${category}/NewItem.do">신상품순</a></td> <td>|</td>
+			<td class="font1"><a href="/shop/goodsList/${category}/favorite.do">인기상품순</a></td> <td>|</td>
+			<td class="font1"><a href="/shop/goodsList/${category}/low.do">낮은가격순</a></td> <td>|</td>
+			<td class="font1"><a href="/shop/goodsList/${category}/high.do">높은가격순</a></td> 
 		</tr>
 	</table>
 </div>
@@ -412,7 +412,7 @@ function fn_selectGoodsListCallback(data) {
 
 		var str = "";
 		$.each(data.list, function(key, value) {
-							var imgpath = "<img src='/stu/file/"+value.GOODS_THUMBNAIL+"' width='400' height='400'>"
+							var imgpath = "<img src='/file/"+value.GOODS_THUMBNAIL+"' width='400' height='400'>"
 							//alert(value.GOODS_IMAGE_STD);
 							var imgpath1 = value.GOODS_IMAGE_STD.split(',');
 							var img0 = imgpath1[0];
@@ -454,8 +454,8 @@ function fn_selectGoodsListCallback(data) {
 							str += "<div class='card'>"
 								+		"<a href='#this' name='title'>"
 								+		"<div class='imgswap'>"
-								+ 		"<img src='/stu/file/"+img0+"' width='400' height='400'>" 
-								+ 		"<img src='/stu/file/"+img1+"' width='400' height='400'>"
+								+ 		"<img src='/file/"+img0+"' width='400' height='400'>" 
+								+ 		"<img src='/file/"+img1+"' width='400' height='400'>"
 								+     " </div> "
 								+     " <c:if test='${"+num+" ne "+pick1+"}'> "
 								+ 	  " <span style='background-color:#ff80bf; line-height: 27px; border-radius: 10px;'><font color='#ffffff' size='2'> "

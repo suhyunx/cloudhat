@@ -39,11 +39,11 @@
 						<b class="fa fa-bar-chart-o fa-fw">나의 쇼핑정보</b> <span class="fa arrow">▼</span>
 				</a>
 					<ul class="nav nav-second-level">
-						<li><a href="/stu/myOrderList.do">- 주문/배송 내역</a></li>
-						<li><a href="/stu/myAsList.do">- 교환/환불/AS 내역</a></li>
-						<li><a href="/stu/my/myPointList.do">- 포인트</a></li>
-						<li><a href="/stu/my/myCouponList.do">- 할인쿠폰</a></li>
-						<li><a href="/stu/my/myLikeList.do">- 찜 상품</a></li>
+						<li><a href="/myOrderList.do">- 주문/배송 내역</a></li>
+						<li><a href="/myAsList.do">- 교환/환불/AS 내역</a></li>
+						<li><a href="/my/myPointList.do">- 포인트</a></li>
+						<li><a href="/my/myCouponList.do">- 할인쿠폰</a></li>
+						<li><a href="/my/myLikeList.do">- 찜 상품</a></li>
 
 					</ul></li>
 
@@ -52,8 +52,8 @@
 						<b class="fa fa-bar-chart-o fa-fw">나의 문의내역</b> <span class="fa arrow">▼</span>
 				</a>
 					<ul class="nav nav-second-level">
-						<li><a href="/stu/my/openMyReview.do">- 나의 상품평</a></li>
-						<li><a href="/stu/my/openMyGoodsQna.do">- 나의 Q&A글</a></li>						
+						<li><a href="/my/openMyReview.do">- 나의 상품평</a></li>
+						<li><a href="/my/openMyGoodsQna.do">- 나의 Q&A글</a></li>						
 					</ul>
 				</li>
 
@@ -62,8 +62,8 @@
 						<b class="fa fa-bar-chart-o fa-fw">개인정보</b> <span class="fa arrow">▼</span>
 				</a>
 					<ul class="nav nav-second-level">
-						<li><a href="/stu/my/memberModify.do">- 회원정보수정</a></li>
-						<li><a href="/stu/my/memberDelete.do">- 회원 탈퇴</a></li>						
+						<li><a href="/my/memberModify.do">- 회원정보수정</a></li>
+						<li><a href="/my/memberDelete.do">- 회원 탈퇴</a></li>						
 					</ul>
 				</li>	
 

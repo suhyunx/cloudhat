@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 가입</title>
-<link rel="stylesheet" href="/stu/css/login.css">
+<link rel="stylesheet" href="/css/login.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
 <script src="<c:url value='/js/common.js'/>" charset="utf-8"></script>
@@ -52,7 +52,7 @@ h1 {
         <img id="loading-image" src="img/Spinner.gif" alt="loading..." />
     </div>
     
-	<form id="signUp" method="post" action="/stu/joinAction.do">
+	<form id="signUp" method="post" action="/joinAction.do">
 		<h3 class="contents">회원가입</h3>
 		<div class="myForm-group">
 			<div class="form-group">

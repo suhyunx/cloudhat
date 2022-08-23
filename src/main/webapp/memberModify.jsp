@@ -13,17 +13,17 @@
 <title>회원정보 수정</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <!-- Custom styles for this template -->
 <link href="css/dashboard.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="css/justified-nav.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
 <!-- 부가적인 테마 -->
-<link rel="stylesheet" href="/stu/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/stu/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -76,7 +76,7 @@ h1 {
 	function fn_alert() {
 			if(confirm("회원정보를 수정하시겠습니까?")) {
 					alert("정보가 수정되었습니다.");
-					location.href='/stu/my/myMain';
+					location.href='/my/myMain';
 				} else {
 						return false;
 					}
@@ -95,7 +95,7 @@ h1 {
 	<div style="text-align: center;">
 	<h2>회 원 수 정</h2>  <br />
 	</div>
-	<form name="frm" method="post" action="/stu/my/memberModifyAction.do">
+	<form name="frm" method="post" action="/my/memberModifyAction.do">
 	<table align="center" class="tab" cellspacing="0" border="1" height="700"
 		  color="#e2e2e2" style="width: 700px;">
 		 	<input type="hidden" name="MEMBER_NO" value="${MEMBER.MEMBER_NO }">

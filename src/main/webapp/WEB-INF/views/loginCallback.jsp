@@ -16,7 +16,7 @@
 		var naverLogin = new naver.LoginWithNaverId(
 			{
 				clientId: "N7cehmsKQVMvrJ4lCsgv",
-				callbackUrl: "/stu/loginCallback.do",
+				callbackUrl: "/loginCallback.do",
 				isPopup: true,
 				callbackHandle: true
 			}

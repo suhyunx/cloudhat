@@ -143,22 +143,22 @@ li {
 			<c:set var="MEMBER_NO" value="${SESSION_NO }" />
 			<c:choose>
 				<c:when test="${MEMBER_NO eq null}">
-					<td><a href="/stu/loginForm.do">로그인</a></td> <td> | </td>
-					<td><a href="/stu/joinForm.do">회원가입</a></td> <td> | </td>
-					<td><a href="/stu/loginForm.do">마이페이지</a></td> <td> | </td>
-					<td><a href="/stu/event/list.do">이벤트</a></td> <td> | </td>
+					<td><a href="/loginForm.do">로그인</a></td> <td> | </td>
+					<td><a href="/joinForm.do">회원가입</a></td> <td> | </td>
+					<td><a href="/loginForm.do">마이페이지</a></td> <td> | </td>
+					<td><a href="/event/list.do">이벤트</a></td> <td> | </td>
 				</c:when>
 				<c:otherwise>
 					<td>Hi, ${SESSION_NAME }님!</td> <td> | </td>
 					<td><a href="#" onClick="signOut();">로그아웃</a></td> <td> | </td>
-					<td><a href="/stu/myOrderList.do">마이페이지</a></td> <td> | </td>
-					<td><a href="/stu/basket/basketList.do">장바구니</a></td> <td> | </td>
-					<td><a href="/stu/event/list.do">이벤트</a></td> <td> | </td>
+					<td><a href="/myOrderList.do">마이페이지</a></td> <td> | </td>
+					<td><a href="/basket/basketList.do">장바구니</a></td> <td> | </td>
+					<td><a href="/event/list.do">이벤트</a></td> <td> | </td>
 				</c:otherwise>
 			</c:choose>
 			
 			
-			<td><a href="/stu/faq/openFaqList.do">고객센터</a></td> <td> | </td>
+			<td><a href="/faq/openFaqList.do">고객센터</a></td> <td> | </td>
 		</tr>
 	
 </form>
@@ -168,7 +168,7 @@ li {
 
 <!-- 검색 -->
 <div style="margin-left:23%;">
-<form method="post" action="/stu/shop/openMainSearch.do" id="searchbox5">
+<form method="post" action="/shop/openMainSearch.do" id="searchbox5">
         <input id="search51" name="keyword" type="text" size="40" placeholder="#원피스 #가디건 #데일리" value="${keyword1}"/>
 </form>
 </div>
@@ -179,16 +179,16 @@ li {
 <!-- 메뉴 -->
 <div class="pagemid">
   <div class="wrapper2">
-   <I><h1><a href="/stu/main.do">JM COLLECTION</a></h1></I>
+   <I><h1><a href="/main.do">JM COLLECTION</a></h1></I>
     <ul class="flex-menu">
       <li>&nbsp;</li>
-      <li><a href="/stu/shop/bestGoodsList.do">BEST</a></li>
-      <li><a href="/stu/shop/newGoodsList.do">NEW</a></li>
-      <li><a href="/stu/shop/goodsList/outer/NewItem.do">OUTER</a></li>
-      <li><a href="/stu/shop/goodsList/top/NewItem.do">TOP</a></li>
-      <li><a href="/stu/shop/goodsList/one-piece/NewItem.do">ONE-PIECE</a></li>
-      <li><a href="/stu/shop/goodsList/bottom/NewItem.do">BOTTOM</a></li>
-      <li><a href="/stu/shop/goodsList/acc/NewItem.do">ACC</a></li>
+      <li><a href="/shop/bestGoodsList.do">BEST</a></li>
+      <li><a href="/shop/newGoodsList.do">NEW</a></li>
+      <li><a href="/shop/goodsList/outer/NewItem.do">OUTER</a></li>
+      <li><a href="/shop/goodsList/top/NewItem.do">TOP</a></li>
+      <li><a href="/shop/goodsList/one-piece/NewItem.do">ONE-PIECE</a></li>
+      <li><a href="/shop/goodsList/bottom/NewItem.do">BOTTOM</a></li>
+      <li><a href="/shop/goodsList/acc/NewItem.do">ACC</a></li>
     </ul>
     <br>
     <div class="bar">

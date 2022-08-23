@@ -5,7 +5,7 @@
 <html>
 <head>
 <title>아이디 비밀번호 찾기</title>
-<link rel="stylesheet" href="/stu/css/login.css">
+<link rel="stylesheet" href="/css/login.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <style>
@@ -71,20 +71,20 @@ button {
     </div>
 	<input type="hidden" name="alert" value="${resultMsg}"/>
 	<input type="hidden" name="isResult" value="${isResult}" />
-	<form action="/stu/findPwAction.do" method="post">
+	<form action="/findPwAction.do" method="post">
 		<div id="findMemform">
 			<h3 class="contents">비밀번호 재설정</h3>
 			
 			<div class="findpwd">
 				<input type="text" class="form-control" name="MEMBER_ID" id="MEMBER_ID" placeholder="아이디">
 				<input type="email" class="form-control" name="MEMBER_EMAIL" id="MEMBER_EMAIL" placeholder="이메일주소">
-				<a href="/stu/findPw.do">비밀번호 재설정</a>
-				<a href="/stu/findId.do">아이디 찾기</a>
+				<a href="/findPw.do">비밀번호 재설정</a>
+				<a href="/findId.do">아이디 찾기</a>
 				<button class="defaultBtn loginBtn" type="submit" id="pwResetBtn">비밀번호 재설정</button>
 			</div>		
 			
 			
-			<p>아직 회원이 아니신가요? <a href="/stu/joinForm.do">회원가입하기</a></p>
+			<p>아직 회원이 아니신가요? <a href="/joinForm.do">회원가입하기</a></p>
 			
 		</div>
 	</form>

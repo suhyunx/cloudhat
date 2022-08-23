@@ -14,6 +14,6 @@
 	회원번호 : ${MEMBER.MEMBER_NO } <br />
 	이름 : ${MEMBER.MEMBER_NAME } <br />
 	${MEMBER.MEMBER_PHONE }
-	<a href="/stu/logout.do">로그아웃</a>
+	<a href="/logout.do">로그아웃</a>
 </body>
 </html>

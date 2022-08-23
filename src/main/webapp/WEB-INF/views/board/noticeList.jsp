@@ -56,10 +56,10 @@ li {
    <div class="pagemid">
       <div class="wrapper3">
          <ul class="flex-menu">
-            <li><a href="/stu/faq/openFaqList.do">FAQ</a></li>
+            <li><a href="/faq/openFaqList.do">FAQ</a></li>
             <li><a
-               href="/stu/notice/openNoticeList.do">공지사항</a></li>
-            <li><a href="/stu/qna/openQnaList.do">QNA</a></li>
+               href="/notice/openNoticeList.do">공지사항</a></li>
+            <li><a href="/qna/openQnaList.do">QNA</a></li>
          </ul>
          <br>
          <div class="bar"></div>

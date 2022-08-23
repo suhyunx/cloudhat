@@ -34,7 +34,7 @@ public class AdminEventController {
 	@Resource(name = "adminCouponService")
 	private AdminCouponService adminCouponService;
 	
-	// start    Event List View  => http://localhost:8080/stu/adminEventList.do
+	// start    Event List View  => http://localhost:8080/adminEventList.do
 	@RequestMapping(value = "/adminEventList.do", method = RequestMethod.GET)
 	public ModelAndView eventList(CommandMap commandMap) throws Exception {
 		ModelAndView mv = new ModelAndView("/event/eventList");
@@ -127,7 +127,7 @@ public class AdminEventController {
 		
 		//S A태그의 쿠폰번호 가져오는 작업
 		String content = (String) commandMap.get("EVENT_CONTENT"); // 저장된 본문을 불러옴
-		int start_index = content.indexOf("<a href=\"/stu/couponSave.do?COUPON_NO="),   last_index = content.lastIndexOf("<a href=\"/stu/couponSave.do?COUPON_NO="), a_link_coupon_no = 0;
+		int start_index = content.indexOf("<a href=\"/couponSave.do?COUPON_NO="),   last_index = content.lastIndexOf("<a href=\"/couponSave.do?COUPON_NO="), a_link_coupon_no = 0;
 		if (start_index >= 0) {
 			a_link_coupon_no = Integer.parseInt(content.substring(start_index, start_index+40).replaceAll("[^0-9]","")); //숫자만 추출
 			commandMap.put("COUPON_NO", a_link_coupon_no);

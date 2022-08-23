@@ -11,18 +11,18 @@
 <title>Insert title here</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
 <!-- 부가적인 테마 -->
-<link rel="stylesheet" href="/stu/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
 
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/stu/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="/stu/js/common.js" charset="utf-8"></script>
+<script src="/js/common.js" charset="utf-8"></script>
 
 <!-- 주소검색 API(카카오) -->
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -250,7 +250,7 @@ h1 {
 
       <!-- tables -->
       <form id="commonForm" name="commonForm"></form>
-      <form name="orderWrite" id="orderWrite" method="post" action="/stu/order/orderPay.do">
+      <form name="orderWrite" id="orderWrite" method="post" action="/order/orderPay.do">
       	<%-- <!-- goods정보 -->
       	<input type="hidden" name="list" value="${list }">
       	<!-- coupon정보 -->
@@ -286,10 +286,10 @@ h1 {
 						<input type="hidden" name="basket_no" value="${row.BASKET_NO }">
 						<tr>
                   			<td>
-                  				<img src='/stu/file/${row.GOODS_THUMBNAIL }' width="70px" height="70px">
+                  				<img src='/file/${row.GOODS_THUMBNAIL }' width="70px" height="70px">
                   			</td>
 							<td>
-				  				<a href="/stu/shop/goodsDetail.do?IDX=${row.GOODS_NO }">${row.GOODS_NAME }</a> <br>
+				  				<a href="/shop/goodsDetail.do?IDX=${row.GOODS_NO }">${row.GOODS_NAME }</a> <br>
 				  				색상: ${row.GOODS_ATT_COLOR } <br> 
 				  				사이즈:${row.GOODS_ATT_SIZE } <br>
 				  			</td>
@@ -486,7 +486,7 @@ h1 {
             	<input type="checkbox" name="orderChk" id="orderChk">
           		(필수)결제서비스 약관에 동의하며, 원활한 배송을 위한 개인정보 제공에 동의합니다.
           		<br><br>
-          		<input type="button" name="all_order" value="장바구니" onClick="location.href='/stu/basket/basketList.do'">
+          		<input type="button" name="all_order" value="장바구니" onClick="location.href='/basket/basketList.do'">
             	<input type="submit" name="order_pay" value="결제진행" onclick="fn_order_pay(); return false;">
             </div>
       

@@ -28,7 +28,7 @@ public class AdminCouponController {
 	@Resource(name = "adminCouponService")
 	private AdminCouponService adminCouponService;
 	
-	// Coupon List View (최초 조회) => http://localhost:8080/stu/adminCouponList.do
+	// Coupon List View (최초 조회) => http://localhost:8080/adminCouponList.do
 	@RequestMapping(value="/adminCouponList.do", method = RequestMethod.GET)
     public ModelAndView couponList(CommandMap commandMap) throws Exception{
     	ModelAndView mv = new ModelAndView("/coupon/couponList");
@@ -81,7 +81,7 @@ public class AdminCouponController {
     	return mv;
     }
 	
-	// Coupon List View => Title onclick  Detail View => http://localhost:8080/stu/adminCouponDetail.do
+	// Coupon List View => Title onclick  Detail View => http://localhost:8080/adminCouponDetail.do
 	@RequestMapping(value = "/adminCouponDetail.do", method = RequestMethod.POST)
 	@ResponseBody
 	public ModelAndView detailCouponInfo(CommandMap commandMap, HttpServletRequest request) throws Exception {

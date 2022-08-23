@@ -235,16 +235,16 @@ public class AdminMainController {
 		if(as_state.equals("2")) {
 			if(gubun.equals("1")) { //교환
 				mv.addObject("as_no", as_no);
-				mv.setView(new RedirectView("/stu/asChangeForm.do"));
+				mv.setView(new RedirectView("/asChangeForm.do"));
 				return mv;
 			} else if(gubun.equals("2")) { //환불
 				mv.addObject("as_no", as_no);
-				mv.setView(new RedirectView("/stu/cashback_ok.do"));
+				mv.setView(new RedirectView("/cashback_ok.do"));
 				return mv;
 				
 			} else if(gubun.equals("3")) { //AS
 				mv.addObject("as_no", as_no);
-				mv.setView(new RedirectView("/stu/coolAs_ok.do"));
+				mv.setView(new RedirectView("/coolAs_ok.do"));
 				return mv;
 			}
 

@@ -49,7 +49,7 @@ h1 {
         var mem_no = "2";
 
         $.ajax({
-            url: "/stu/my_side.do",
+            url: "/my_side.do",
             data : ,
             type: "GET",
             async:false,
@@ -73,7 +73,7 @@ h1 {
 			session.removeAttribute("member_no");
 			session.removeAttribute("member_id");
 			//session값을 제거
-			response.sendRedirect("/stu/main.do");
+			response.sendRedirect("/main.do");
 			// 페이지의 메인으로 이동
 			%>
 		}else{
@@ -99,7 +99,7 @@ h1 {
 		%>
 		<script>
 		alert("로그인 정보가 없습니다.");
-		location="/stu/login.do";
+		location="/login.do";
 		</script>
 		<%
 		}
@@ -152,7 +152,7 @@ h1 {
 						<li><a href="">- 내가 쓴 리뷰</a></li>
 						<li><a href="">- 내가 쓴 상품</a></li>						
 					</ul></li>
-				<li><a href="/stu/adminOrder.do"
+				<li><a href="/adminOrder.do"
 					style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">주문배송관리</b> 
 				</a></li>

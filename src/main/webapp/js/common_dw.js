@@ -110,18 +110,18 @@ function gfn_renderPaging(params){
 	var next = (parseInt((currentIndex-1)/10)+1)*10+1 < totalIndexCount ? (parseInt((currentIndex-1)/10)+1) *10+1 : totalIndexCount;
 	
 	if(totalIndexCount > 10){ //페이지수가 10개 이상인 경우
-		preStr += "<a herf='#this' class='pad_1' style='margin-right: 10px;' onclick='_movePage(1)'><img src='/stu/img/bttttnrrrr.jpg' width='30px' height='30px' border='0' alt='right'></a>" +
-			"<a href='#this' class='pad_1' style='margin-right: 10px;' onclick='_movePage("+ prev +")'><img src='/stu/img/bttttnrrrr.jpg' width='30px' height='30px' border='0' alt='right'></a>";
+		preStr += "<a herf='#this' class='pad_1' style='margin-right: 10px;' onclick='_movePage(1)'><img src='/img/bttttnrrrr.jpg' width='30px' height='30px' border='0' alt='right'></a>" +
+			"<a href='#this' class='pad_1' style='margin-right: 10px;' onclick='_movePage("+ prev +")'><img src='/img/bttttnrrrr.jpg' width='30px' height='30px' border='0' alt='right'></a>";
 		
 	}else if(totalIndexCount <=10 && totalIndexCount > 1){ //페이지수가 10개보다 작은 경우
-		preStr += "<a href='#this' class='pad_1' style='margin-right: 10px;' onclick='_movePage(1)'><img src='/stu/img/bttttnrrrr.jpg' width='30px' height='30px' border='0' alt='right'></a>";
+		preStr += "<a href='#this' class='pad_1' style='margin-right: 10px;' onclick='_movePage(1)'><img src='/img/bttttnrrrr.jpg' width='30px' height='30px' border='0' alt='right'></a>";
 	}else if(totalIndexCount >= 1) {}
 	
 	if(totalIndexCount > 10){ //페이지수가 10개 이상인 경우
-		postStr += "<a href='#this' class='pad_1' style='margin-left: 10px;' onclick='_movePage("+ next +")'><img src='/stu/img/bttttn.jpg' width='30px' height='30px' border='0' alt='right'></a>"+
-			"<a href='#this' class='pad_1' style='margin-left: 10px;' onclick='_movePage("+ totalIndexCount +")'><img src='/stu/img/bttttn.jpg' width='30px' height='30px' border='0' alt='right'></a>";
+		postStr += "<a href='#this' class='pad_1' style='margin-left: 10px;' onclick='_movePage("+ next +")'><img src='/img/bttttn.jpg' width='30px' height='30px' border='0' alt='right'></a>"+
+			"<a href='#this' class='pad_1' style='margin-left: 10px;' onclick='_movePage("+ totalIndexCount +")'><img src='/img/bttttn.jpg' width='30px' height='30px' border='0' alt='right'></a>";
 	}else if(totalIndexCount <=10 && totalIndexCount > 1){ //페이지수가 10개보다 작은 경우
-		postStr+= "<a href='#this' class='pad_1' style='margin-left: 10px;' onclick='_movePage("+ totalIndexCount +")'><img src='/stu/img/bttttn.jpg' width='30px' height='30px' border='0' alt='right'></a>";
+		postStr+= "<a href='#this' class='pad_1' style='margin-left: 10px;' onclick='_movePage("+ totalIndexCount +")'><img src='/img/bttttn.jpg' width='30px' height='30px' border='0' alt='right'></a>";
 	}else if(totalIndexCount >= 1) {}
 	
 	for(var i=first; i<(first+last); i++){

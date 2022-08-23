@@ -66,11 +66,11 @@
 	<div class="navbar-default sidebar" role="navigation" style="width: 200px;">
 		<div class="sidebar-nav navbar-collapse">
 			<ul class="nav" id="side-menu">
-				<li><a href="/stu/adminMain.do"
+				<li><a href="/adminMain.do"
 					style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">관리자홈</b>
 				</a></li>
-				<li><a href="/stu/main.do"
+				<li><a href="/main.do"
 					style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">쇼핑몰로 이동</b> 
 				</a></li>
@@ -84,7 +84,7 @@
 						<li><a href="">- 할인 적용</a></li>
 					</ul></li>
 
-				<li><a href="/stu/adminOrder.do"
+				<li><a href="/adminOrder.do"
 					style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">주문배송관리</b> 
 				</a></li>
@@ -94,12 +94,12 @@
 						<b class="fa fa-dashboard fa-fw">회원관리</b> 
 				</a></li>
 
-				<li><a href="/stu/adminReport.do"
+				<li><a href="/adminReport.do"
 					style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">매출확인</b> 
 				</a></li>
 
-				<li><a href="/stu/adminAslist.do"
+				<li><a href="/adminAslist.do"
 					style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">교환/환불/AS</b> 
 				</a></li>
@@ -109,10 +109,10 @@
 						class="fa arrow">▼</span>
 				</a>
 					<ul class="nav nav-second-level">
-						<li><a href="/stu/">- 공지사항</a></li>
-						<li><a href="/stu/">- FAQ</a></li>
-						<li><a href="/stu/">- 구매후기</a></li>
-						<li><a href="/stu/">- 상품Q&A</a></li>
+						<li><a href="/">- 공지사항</a></li>
+						<li><a href="/">- FAQ</a></li>
+						<li><a href="/">- 구매후기</a></li>
+						<li><a href="/">- 상품Q&A</a></li>
 					</ul></li>
 				
 			</ul>

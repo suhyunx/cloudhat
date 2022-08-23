@@ -36,7 +36,7 @@
 <body>
 <br><br><br>
 	<h3 align="center" style="font-size:40px;">로그인</h3>
-	<form name="frm" method="POST" action="/stu/loginAction.do">
+	<form name="frm" method="POST" action="/loginAction.do">
 	<table align="center" cellspacing="15" width="300" style="margin:auto;">
 			<input type="hidden" name="MEMBER_NO">
 			<input type="hidden" name="MEMBER_NAME">
@@ -67,9 +67,9 @@
 	<br>
 	
 		<p align="center" style="margin-left:7px;font-size:18px;">
-			<a href="/stu/joinForm.do">회원가입</a> |
-			<a href="/stu/findId.do">아이디 찾기</a> |
-			<a href="/stu/findPw.do">비밀번호 찾기</a>
+			<a href="/joinForm.do">회원가입</a> |
+			<a href="/findId.do">아이디 찾기</a> |
+			<a href="/findPw.do">비밀번호 찾기</a>
 		</p>
 </body>
 </html>
