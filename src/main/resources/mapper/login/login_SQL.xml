@@ -23,9 +23,9 @@
 			FROM 
 				MEMBER 
 			WHERE 
-				MEMBER_NAME = #{MEMBER_NAME} 
+				MEMBER_NAME = #{MEMBER_NAME}
 			AND 
-				MEMBER_EMAIL = #{MEMBER_EMAIL}  
+				MEMBER_EMAIL = #{MEMBER_EMAIL}
 		]]>
 	</select>
 	
@@ -72,7 +72,7 @@
 			FROM 
 				MEMBER 
 			WHERE 
-				MEMBER_ID = #{MEMBER_ID} 
+				MEMBER_ID = #{MEMBER_ID}
 			AND 
 				MEMBER_PASSWD = #{MEMBER_PASSWD}
 		]]>
