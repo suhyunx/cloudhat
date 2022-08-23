@@ -29,16 +29,16 @@
 		</div>
 		<div class="sidebar-nav navbar-collapse" style="width:180px;">
 			<ul class="nav" id="side-menu">
-				<li><a href="/stu/main.do" style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
+				<li><a href="/main.do" style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">쇼핑몰로 이동</b> 
 				</a></li>
 					
-				<li><a href="/stu/order_admin_a.do"
+				<li><a href="/order_admin_a.do"
 					style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">주문배송관리</b> 
 				</a></li>
 				
-				<li><a href="/stu/as_admin.do" style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
+				<li><a href="/as_admin.do" style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">교환/환불/AS</b> 
 				</a></li>
 
@@ -49,12 +49,12 @@
 				</a>
 					<ul class="nav nav-second-level">
 						<li><a href="">- 상품목록/수정</a></li>
-						<li><a href="/stu/shop/openGoodsWrite.do">- 상품등록</a></li>
+						<li><a href="/shop/openGoodsWrite.do">- 상품등록</a></li>
 						<!-- <li><a href="">- 할인 적용</a></li> -->
 					</ul></li>
 
 				
-				<li><a href="/stu/member_admin.do"
+				<li><a href="/member_admin.do"
 					style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">회원관리</b> 
 				</a></li>
@@ -63,9 +63,9 @@
 						<b class="fa fa-bar-chart-o fa-fw">게시판관리</b> <span class="fa arrow">▼</span>
 				</a>
 					<ul class="nav nav-second-level">
-						<li><a href="/stu/notice/openNoticeList.do">- 공지사항</a></li>
-						<li><a href="/stu/faq/openFaqList.do">- FAQ</a></li>
-						<li><a href="/stu/qna/openQnaList.do">- 상품Q&A</a></li>
+						<li><a href="/notice/openNoticeList.do">- 공지사항</a></li>
+						<li><a href="/faq/openFaqList.do">- FAQ</a></li>
+						<li><a href="/qna/openQnaList.do">- 상품Q&A</a></li>
 					</ul></li>
 					
 				<!-- s 쿠폰 추가 2020.06.25 -->
@@ -74,8 +74,8 @@
 						<b class="fa fa-bar-chart-o fa-fw">쿠폰관리</b> <span class="fa arrow">▼</span>
 					</a>
 					<ul class="nav nav-second-level">
-						<li><a href="/stu/adminCouponList.do">- 쿠폰목록/수정</a></li>
-						<li><a href="/stu/adminCouponWriteForm.do">- 쿠폰등록</a></li>
+						<li><a href="/adminCouponList.do">- 쿠폰목록/수정</a></li>
+						<li><a href="/adminCouponWriteForm.do">- 쿠폰등록</a></li>
 					</ul>
 				</li>
 				<!-- e 쿠폰 추가 2020.06.25 -->
@@ -86,8 +86,8 @@
 						<b class="fa fa-bar-chart-o fa-fw">이벤트관리</b> <span class="fa arrow">▼</span>
 					</a>
 					<ul class="nav nav-second-level">
-						<li><a href="/stu/adminEventList.do">- 이벤트목록/수정</a></li>
-						<li><a href="/stu/adminEventWriteForm.do">- 이벤트등록</a></li>
+						<li><a href="/adminEventList.do">- 이벤트목록/수정</a></li>
+						<li><a href="/adminEventWriteForm.do">- 이벤트등록</a></li>
 					</ul>
 				</li>
 				<!-- e 이벤트 추가 2020.06.30 -->

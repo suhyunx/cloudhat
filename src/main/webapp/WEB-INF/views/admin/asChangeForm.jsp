@@ -152,7 +152,7 @@
             </c:forEach>
             <tr>
 				<td colspan="4">
-					<input type="button" value="목록으로" class="pull-left" onclick="javascript:location.href='/stu/as_admin.do'"/>
+					<input type="button" value="목록으로" class="pull-left" onclick="javascript:location.href='/as_admin.do'"/>
 					<!-- <input type="submit" value="교환" onclick="achfb_change()" class="pull-right"/> --> 
                	</td>
             </tr>

@@ -106,26 +106,26 @@ function as_ok(as_no, as_state, order_no, order_state, gubun){
 					<c:forEach items="${as_admin_list }" var="state" begin="0" end="0">
 					<c:choose>
 						<c:when test="${state.AS_STATE eq '1' }">
-						<li class="active"><a href="/stu/as_admin.do?as=1">신규요청</a></li>
+						<li class="active"><a href="/as_admin.do?as=1">신규요청</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/as_admin.do?as=1">신규요청</a></li>
+						<li><a href="/as_admin.do?as=1">신규요청</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state.AS_STATE eq '2' }">
-						<li class="active"><a href="/stu/as_admin.do?as=2">처리중</a></li>
+						<li class="active"><a href="/as_admin.do?as=2">처리중</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/as_admin.do?as=2">처리중</a></li>
+						<li><a href="/as_admin.do?as=2">처리중</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state.AS_STATE eq '3' }">
-						<li class="active"><a href="/stu/as_admin.do?as=3">처리완료</a></li>
+						<li class="active"><a href="/as_admin.do?as=3">처리완료</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/as_admin.do?as=3">처리완료</a></li>
+						<li><a href="/as_admin.do?as=3">처리완료</a></li>
 						</c:otherwise>
 					</c:choose>
 					</c:forEach>
@@ -134,26 +134,26 @@ function as_ok(as_no, as_state, order_no, order_state, gubun){
 					<c:forEach items="${as_state }" var="state" begin="0" end="0">
 					<c:choose>
 						<c:when test="${state eq '1' }">
-						<li class="active"><a href="/stu/as_admin.do?as=1">신규요청</a></li>
+						<li class="active"><a href="/as_admin.do?as=1">신규요청</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/as_admin.do?as=1">신규요청</a></li>
+						<li><a href="/as_admin.do?as=1">신규요청</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state eq '2' }">
-						<li class="active"><a href="/stu/as_admin.do?as=2">처리중</a></li>
+						<li class="active"><a href="/as_admin.do?as=2">처리중</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/as_admin.do?as=2">처리중</a></li>
+						<li><a href="/as_admin.do?as=2">처리중</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state eq '3' }">
-						<li class="active"><a href="/stu/as_admin.do?as=3">처리완료</a></li>
+						<li class="active"><a href="/as_admin.do?as=3">처리완료</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/as_admin.do?as=3">처리완료</a></li>
+						<li><a href="/as_admin.do?as=3">처리완료</a></li>
 						</c:otherwise>
 					</c:choose>
 					</c:forEach>

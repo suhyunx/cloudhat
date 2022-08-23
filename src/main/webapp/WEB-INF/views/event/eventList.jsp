@@ -211,7 +211,7 @@ function fn_listCallBack(data){
 		$.each(data.list, function(key, value){
 			str += "<tr>"
 					+ "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>" + value.RNUM + "</td>"
-					+ "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'><img alt='image' width='*' height='50px' style='margin: 5px; border: 1px solid lightgray; border-radius: 10px;' src='/stu/file/" + value.EVENT_THUMBNAIL + "'></td>"
+					+ "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'><img alt='image' width='*' height='50px' style='margin: 5px; border: 1px solid lightgray; border-radius: 10px;' src='/file/" + value.EVENT_THUMBNAIL + "'></td>"
 					+ "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>" + value.EVENT_NO + "</td>"
 					+ "<td style='letter-spacing: 1px; text-align: left; vertical-align: middle;'>"
 						+ "<a href='#this'name='title'>" + value.EVENT_TITLE  + "</a>"

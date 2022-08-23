@@ -41,18 +41,18 @@
 	<br>
 	
 	<!-- <p align="center">
-		<a href="/stu/findId.do">휴대전화로 찾기</a>
-		<a href="/stu/findId2.do">이메일로 찾기</a>
+		<a href="/findId.do">휴대전화로 찾기</a>
+		<a href="/findId2.do">이메일로 찾기</a>
 	</p> -->
 	<p align="center">
-	<button type="button" class="Action" onclick="location.href='/stu/findId.do'">휴대전화로 찾기</button>
-	<button type="button" class="Action" onclick="location.href='/stu/findId2.do'">이메일로 찾기</button>
+	<button type="button" class="Action" onclick="location.href='/findId.do'">휴대전화로 찾기</button>
+	<button type="button" class="Action" onclick="location.href='/findId2.do'">이메일로 찾기</button>
 	</p>
 	
 	<br>
 	<br>
 	
-	<form name="frm" action="/stu/findIdAction.do">
+	<form name="frm" action="/findIdAction.do">
 	<table align="center" width="500" style="margin:auto;">
 			<input type="hidden" name="MEMBER_ID" value="${MEMBER.MEMBER_ID }">
 		<tr>

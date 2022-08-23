@@ -14,21 +14,21 @@
 <title>my주문상태</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <!-- Custom styles for this template -->
 <link href="css/dashboard.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="css/justified-nav.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
 <!-- 부가적인 테마 -->
-<link rel="stylesheet" href="/stu/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/stu/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
 
-<script src="/stu/js/common.js" charset="utf-8"></script>
+<script src="/js/common.js" charset="utf-8"></script>
 
  <script>
  $(document).ready(function(){
@@ -80,13 +80,13 @@ function order_ok(mem_no, order_no){
 	
 	if(confirm("수취확인 후 교환/환분/AS문의는 고객 게시판을 이용해 주시기 바랍니다.")){
 	$.ajax({
-		url: "/stu/order_ok.do",
+		url: "/order_ok.do",
 		data : {"mem_no": mem_no, "order_no": order_no},
 		type: "post",
 		async:false,
 		success : function(data){
 		alert("수취확인이 완료되었습니다.");
-		location.href = "/stu/myOrderList.do";
+		location.href = "/myOrderList.do";
 		}
 	})
 	}else{
@@ -179,11 +179,11 @@ h1 {
 							<td >
 							<c:choose>
 								<c:when test="${my_order.HAP_CNT eq '1' }">
-								<a href="/stu/my_detail.do?order_no=${my_order.ORDER_NO  }" name="title">${my_order.GOODS_NAME }</a>
+								<a href="/my_detail.do?order_no=${my_order.ORDER_NO  }" name="title">${my_order.GOODS_NAME }</a>
 								<input type="hidden" id="member_no" value="${my_order.MEMBER_NO }">
 								</c:when>
 								<c:otherwise>
-								<a href="/stu/my_detail.do?order_no=${my_order.ORDER_NO  }" name="title">${my_order.GOODS_NAME }</a>외 ${my_order.HAP_CNT -1 }건
+								<a href="/my_detail.do?order_no=${my_order.ORDER_NO  }" name="title">${my_order.GOODS_NAME }</a>외 ${my_order.HAP_CNT -1 }건
 								<input type="hidden" id="member_no" value="${my_order.MEMBER_NO }">
 								</c:otherwise>
 							</c:choose>

@@ -17,7 +17,7 @@
 <script src="<c:url value='/js/commonn.js'/>" charset="utf-8"></script>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <!-- Custom styles for this template -->
 <link href="css/dashboard.css" rel="stylesheet">
 <!-- Custom styles for this template -->
@@ -232,12 +232,12 @@ table {
 				$.each(data.list, function(key, value){
 					var date = moment(value.GOODS_QNA_DATE).format("YYYY-MM-DD");
 					var Level = value.GOODS_QNA_LEVEL;
-					var Q= "<img src='/stu/img/ico_qna_q.png' align='left'>";
-					var A= "<img src='/stu/img/ico_qna_a.png' align='left'>";
+					var Q= "<img src='/img/ico_qna_q.png' align='left'>";
+					var A= "<img src='/img/ico_qna_a.png' align='left'>";
 					if(Level == 1){ //답변 있음
 						str += " <tr class='show1'> "
-							+  " <td><img src='/stu/file/"+value.GOODS_THUMBNAIL+"' width='70px' height='70px'></td>"
-							+  " <td><a href='/stu/shop/goodsDetail.do?IDX="+value.GOODS_NO +"' name='title'>" + value.GOODS_NAME + "</a></td>"
+							+  " <td><img src='/file/"+value.GOODS_THUMBNAIL+"' width='70px' height='70px'></td>"
+							+  " <td><a href='/shop/goodsDetail.do?IDX="+value.GOODS_NO +"' name='title'>" + value.GOODS_NAME + "</a></td>"
 							+  " <td align='center'> "+value.GOODS_QNA_TITLE+"</td>"
 							+  " <td align='center' > "+date+"</td>"
 							+  " <td align='center'> <span class='btn btn-danger'>답변완료</span></td>"
@@ -250,8 +250,8 @@ table {
 							+  " </div> ";
 							}else{ //답변 없음
 							str += " <tr class='show1'> "
-								+  " <td><img src='/stu/file/"+value.GOODS_THUMBNAIL+"' width='70px' height='70px'></td>"
-								+  " <td><a href='/stu/shop/goodsDetail.do?IDX="+value.GOODS_NO +"' name='title'>" + value.GOODS_NAME + "</a></td>"
+								+  " <td><img src='/file/"+value.GOODS_THUMBNAIL+"' width='70px' height='70px'></td>"
+								+  " <td><a href='/shop/goodsDetail.do?IDX="+value.GOODS_NO +"' name='title'>" + value.GOODS_NAME + "</a></td>"
 								+  " <td align='center'> "+value.GOODS_QNA_TITLE+"</td>"
 								+  " <td align='center' > "+date+"</td>"
 								+  " <td align='center'> <span class='btn btn-danger'>답변 준비중</span></td>"

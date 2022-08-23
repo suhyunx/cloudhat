@@ -106,7 +106,7 @@ function fn_listCallBack(data){
 		$.each(data.list, function(key, value){
 			str += "<tr>"
 					+ "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>"
-					+ 	"<a href='#this' name='eventClick'><img alt='image' width='1000px' height='200px' style='margin: 20px 0 0 0; border: 1px solid #DCDCDC; border-radius: 10px;' src='/stu/file/" + value.EVENT_THUMBNAIL + "'></a>"
+					+ 	"<a href='#this' name='eventClick'><img alt='image' width='1000px' height='200px' style='margin: 20px 0 0 0; border: 1px solid #DCDCDC; border-radius: 10px;' src='/file/" + value.EVENT_THUMBNAIL + "'></a>"
 					+	"<input type='hidden' id='EVENT_NO' value='"+value.EVENT_NO+"'>"
 					+ "</td>"
 			    + "</tr>";

@@ -34,7 +34,7 @@
 	
 	<p align="center">
 		<button type="button" class="Action2"
-			onclick="location.href='/stu/loginForm.do'">로그인</button>
+			onclick="location.href='/loginForm.do'">로그인</button>
 	</p>
 	
 </body>

@@ -49,7 +49,7 @@
 
 	var dbPassword = "";
 	$.ajax({
-		url: "/stu/password_f.do",
+		url: "/password_f.do",
 		data : {"mem_no": $('#chfMember_no').val()},
 		type: "post",
 		async:false,  // ajax동기식
@@ -192,14 +192,14 @@ h1 {
             	<c:choose>
 					<c:when test="${chfc.ORDER_STATE eq '2' }">
 					<td colspan="5">
-                	<input type="button" value="목록으로" class="pull-left" onclick="javascript:location.href='/stu/myOrderList.do'"/>
+                	<input type="button" value="목록으로" class="pull-left" onclick="javascript:location.href='/myOrderList.do'"/>
                     <input type="submit" value="환불" onclick="chf_change(2)" class="pull-right"/>
                     <input type="submit" value="교환" onclick="chf_change(1)" class="pull-right"/>
                 	</td>
 					</c:when>
 					<c:when test="${chfc.ORDER_STATE eq '4' }">
 					<td colspan="5">
-                	<input type="button" value="목록으로" class="pull-left" onclick="javascript:location.href='/stu/myOrderList.do'"/>
+                	<input type="button" value="목록으로" class="pull-left" onclick="javascript:location.href='/myOrderList.do'"/>
                     <input type="submit" value="AS교환" onclick="chf_change(3)" class="pull-right"/>
                     <input type="submit" value="환불" onclick="chf_change(2)" class="pull-right"/>
                     <input type="submit" value="교환" onclick="chf_change(1)" class="pull-right"/>

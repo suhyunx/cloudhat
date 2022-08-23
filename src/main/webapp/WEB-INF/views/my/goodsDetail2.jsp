@@ -288,7 +288,7 @@ p {
 		<div style="float:left; margin-left:350px; width:26%;">
 			<table border="0" width="500">
 				<tr>
-					<td><img src="/stu/file/${list.GOODS_THUMBNAIL }" width="500"
+					<td><img src="/file/${list.GOODS_THUMBNAIL }" width="500"
 						height="500" /></td>
 				</tr>
 			</table>
@@ -706,7 +706,7 @@ function fn_Qna(){ // 상품문의 작성
 		comSubmit.submit();
 	}else {
 		alert("로그인 후 이용해주세요.");
-		location.href = "/stu/loginForm.do";
+		location.href = "/loginForm.do";
 	}
 	
 }
@@ -720,7 +720,7 @@ function fn_Review(){
 		comSubmit.submit();
 	}else {
 		alert("로그인 후 이용해주세요.");
-		location.href = "/stu/loginForm.do";
+		location.href = "/loginForm.do";
 	}
 	
 }
@@ -741,7 +741,7 @@ function fn_InsertLike() { // 좋아요
 		comSubmit.submit();
 	}else {
 		alert("로그인 후 이용해주세요.");
-		location.href = "/stu/loginForm.do";
+		location.href = "/loginForm.do";
 	}
 	
 	
@@ -762,7 +762,7 @@ function fn_GoodsOrder() { // 구매하기
 		}
 	}else {
 		alert("로그인 후 이용해주세요.");
-		location.href = "/stu/loginForm.do";
+		location.href = "/loginForm.do";
 	}
    
 }
@@ -777,7 +777,7 @@ function fn_InsertBasket() { // 장바구니
 		if(len==0){
 			alert("상품을 추가해 주세요.");
 		}else{
-			var url = "/stu/shop/basketPopUp.do";
+			var url = "/shop/basketPopUp.do";
 			var name = "popup";
 			var option = "width=382, height=227, top=500, left=800, location=no";
 			
@@ -788,7 +788,7 @@ function fn_InsertBasket() { // 장바구니
 		}
 	}else {
 		alert("로그인 후 이용해주세요.");
-		location.href = "/stu/loginForm.do";
+		location.href = "/loginForm.do";
 	}
 	
 }
@@ -1003,9 +1003,9 @@ function fn_selectGoodsListCallback(data) {
 								var date = moment(value.GOODS_QNA_DATE).format("YYYY-MM-DD");
 							    var Level = value.GOODS_QNA_LEVEL;
 							    var sc = value.GOODS_QNA_SECRET;	 				    
-							    var img = "<img src='/stu/img/ico_encryption.png'>";	
-								var Q= "<img src='/stu/img/ico_qna_q.png'>";
-								var A= "<img src='/stu/img/ico_qna_a.png'>";
+							    var img = "<img src='/img/ico_encryption.png'>";	
+								var Q= "<img src='/img/ico_qna_q.png'>";
+								var A= "<img src='/img/ico_qna_a.png'>";
 								if(Level == 1){//답변
 									if(sc == 0){//공개
 							str += "  "
@@ -1167,10 +1167,10 @@ function fn_selectReviewListCallback(data) {
 		var cnt = 1;
 		$.each(data.reviewList, function(key, value) {
 							var date = moment(value.REVIEW_DATE).format("YYYY-MM-DD");
-							var img = "<img src='/stu/img/icon_201602021908415400.jpg' >"
+							var img = "<img src='/img/icon_201602021908415400.jpg' >"
 							var REVIEW_IMG = value.REVIEW_IMG;
 							var gubun = value.REVIEW_NO;
-							var imgpath = "<img src='/stu/file/"+value.REVIEW_IMG+"' width='500' height='400'>";
+							var imgpath = "<img src='/file/"+value.REVIEW_IMG+"' width='500' height='400'>";
 							
 							
 							if(REVIEW_IMG == null){

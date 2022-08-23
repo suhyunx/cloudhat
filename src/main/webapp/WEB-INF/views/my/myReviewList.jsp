@@ -17,7 +17,7 @@
 <script src="<c:url value='/js/commonn.js'/>" charset="utf-8"></script>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <!-- Custom styles for this template -->
 <link href="css/dashboard.css" rel="stylesheet">
 <!-- Custom styles for this template -->
@@ -223,16 +223,16 @@ p{
 				var str = "";
 				$.each(data.list, function(key, value) {
 									var date = moment(value.REVIEW_DATE).format("YYYY-MM-DD");
-									var img = "<img src='/stu/img/icon_201602021908415400.jpg' >"
+									var img = "<img src='/img/icon_201602021908415400.jpg' >"
 									var REVIEW_IMG = value.REVIEW_IMG;
 									var gubun = value.REVIEW_NO;
-									var imgpath = "<img src='/stu/file/"+value.REVIEW_IMG+"' width='500' height='400'>";
+									var imgpath = "<img src='/file/"+value.REVIEW_IMG+"' width='500' height='400'>";
 									
 									
 									if(REVIEW_IMG == null){
 									str += " <tr class='show1'> "
-										+  "<td><img src='/stu/file/"+value.GOODS_THUMBNAIL+"' width='70px' height='70px'></td>"
-										+  " <td><a href='/stu/shop/goodsDetail.do?IDX="+value.GOODS_NO +"' name='title'>" + value.GOODS_NAME + "</a></td>"
+										+  "<td><img src='/file/"+value.GOODS_THUMBNAIL+"' width='70px' height='70px'></td>"
+										+  " <td><a href='/shop/goodsDetail.do?IDX="+value.GOODS_NO +"' name='title'>" + value.GOODS_NAME + "</a></td>"
 										+  " <td align='center'><a>"+value.REVIEW_TITLE+"</a></td> "
 										+  " <td align='center' > "+value.MEMBER_NAME+"</td>"
 										+  " <td align='center' > "+date+"</td>"
@@ -243,8 +243,8 @@ p{
 										
 					 				}else{
 										str += " <tr> "
-											+  " <td><img src='/stu/file/"+value.GOODS_THUMBNAIL+"' width='70px' height='70px'></td>"
-											+  " <td><a href='/stu/shop/goodsDetail.do?IDX="+value.GOODS_NO +"' name='title'>" + value.GOODS_NAME + "</a></td>"
+											+  " <td><img src='/file/"+value.GOODS_THUMBNAIL+"' width='70px' height='70px'></td>"
+											+  " <td><a href='/shop/goodsDetail.do?IDX="+value.GOODS_NO +"' name='title'>" + value.GOODS_NAME + "</a></td>"
 											+  " <td align='center'> "+value.REVIEW_TITLE+" "+img+ "</td> "
 											+  " <td align='center' > "+value.MEMBER_NAME+"</td>"
 											+  " <td align='center' > "+date+"</td>"

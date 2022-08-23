@@ -32,7 +32,7 @@ function order_list() {
 	<c:forEach items="${order_detail}" var="detail">
 		os = ${detail.ORDER_STATE}
 	</c:forEach>
-	location.href="/stu/order_admin_a.do?os="+os;
+	location.href="/order_admin_a.do?os="+os;
 	return;	
 }
 	
