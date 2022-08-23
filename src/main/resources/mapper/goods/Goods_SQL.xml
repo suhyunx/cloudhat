@@ -117,10 +117,10 @@ SELECT
 		      FROM GOODS GS, GOODS_IMAGE GI
 		      WHERE GS.GOODS_NO = GI.GOODS_NO
 		      <if test="keyword != null">
-		   	 AND (GOODS_NAME LIKE '%' || #{keyword} || '%' OR GOODS_KEYWORD LIKE '%' || #{keyword} || '%')
-		     </if> 
+		   	 AND GOODS_NAME LIKE '%${keyword}%'
+		     </if>
 		     AND GUBUN = '0'
-		     ORDER BY GOODS_NO DESC 
+		     ORDER BY GOODS_NO DESC
 		<include refid="common.pagingPost2"/>
 		   
 	</select>

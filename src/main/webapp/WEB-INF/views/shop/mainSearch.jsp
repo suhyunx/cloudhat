@@ -339,6 +339,7 @@ function fn_selectGoodsList(pageNo) {
 	comAjax.addParam("PAGE_ROW", 16);
 	comAjax.addParam("keyword", $('#keyword').val());
 	comAjax.ajax();
+	alert('#keyword');
 }
 
 function fn_selectGoodsListCallback(data) {
