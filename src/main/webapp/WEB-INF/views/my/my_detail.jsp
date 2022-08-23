@@ -50,7 +50,7 @@ function order_list() {
 	<c:forEach items="${order_detail}" var="detail">
 		os = ${detail.ORDER_STATE}
 	</c:forEach>
-	location.href="/stu/order_admin_a.do?os="+os;
+	location.href="/order_admin_a.do?os="+os;
 	return;	
 }
 
@@ -244,10 +244,10 @@ function fn_order_modify() { // 유효성체크
 					<%-- ${detail_sub } --%>			
 						<tr>
 							<td style="text-align:center">
-                  				<img src='/stu/file/${detail_sub.GOODS_THUMBNAIL }' width="70px" height="70px">
+                  				<img src='/file/${detail_sub.GOODS_THUMBNAIL }' width="70px" height="70px">
                   			</td>
 							<td>
-								<a href="/stu/shop/goodsDetail.do?IDX=${detail_sub.GOODS_NO }">${detail_sub.GOODS_NAME }</a> <br> 
+								<a href="/shop/goodsDetail.do?IDX=${detail_sub.GOODS_NO }">${detail_sub.GOODS_NAME }</a> <br> 
 								색상: ${detail_sub.ORDER_DETAIL_COLOR } <br> 
 				  				사이즈:${detail_sub.ORDER_DETAIL_SIZE } <br>
 							</td>

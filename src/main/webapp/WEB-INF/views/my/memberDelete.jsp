@@ -7,10 +7,10 @@
 <title>회원 탈퇴</title>
 <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
 <!-- 부가적인 테마 -->
-<link rel="stylesheet" href="/stu/css/login.css">
+<link rel="stylesheet" href="/css/login.css">
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/stu/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 <style>
 	#memberDelete {
@@ -131,7 +131,7 @@ $("#deleteMemBtn").click(function(){
 		$.ajax({
 	         
 	         type:"POST",
-	         url:"/stu/my/memberDeleteAction.do",
+	         url:"/my/memberDeleteAction.do",
 	         data:"json",
 	         
 	         success:function(data){

@@ -39,7 +39,7 @@
 		
 		var comSubmit = new ComSubmit();
 		var state = 0;
-		comSubmit.setUrl("<c:url value='/stu/order_admin_a.do' />");
+		comSubmit.setUrl("<c:url value='/order_admin_a.do' />");
 		comSubmit.addParam("order_state", state);
 		comSubmit.submit();
 	}
@@ -58,13 +58,13 @@ function order_state(state, no){
  
 	if(confirm("확인하시겠습니까?")){
 	 $.ajax({
-         url: "/stu/order_admin_a.do",
+         url: "/order_admin_a.do",
          data : {"order_state": state, "order_no": no, "express":exp},
          type: "post",
          async:false,
          success : function(data){
         	 alert("주문상태가 변경되었습니다.");
-         	 location.href = "/stu/order_admin_a.do?os="+state;
+         	 location.href = "/order_admin_a.do?os="+state;
 /*              window.opener.location.reload(); */
              /* self.close(); */
          }
@@ -103,50 +103,50 @@ function order_detail(no){
 					<c:forEach items="${order_a }" var="state" begin="0" end="0">
 					<c:choose>
 						<c:when test="${state.ORDER_STATE eq '0' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=0">신규주문</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=0">신규주문</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=0">신규주문</a></li>
+						<li><a href="/order_admin_a.do?os=0">신규주문</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state.ORDER_STATE eq '1' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=1">입금확인</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=1">입금확인</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=1">입금확인</a></li>
+						<li><a href="/order_admin_a.do?os=1">입금확인</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state.ORDER_STATE eq '2' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=2">배송준비</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=2">배송준비</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=2">배송준비</a></li>
+						<li><a href="/order_admin_a.do?os=2">배송준비</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state.ORDER_STATE eq '3' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=3">배송중</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=3">배송중</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=3">배송중</a></li>
+						<li><a href="/order_admin_a.do?os=3">배송중</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state.ORDER_STATE eq '4' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=4">수취확인</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=4">수취확인</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=4">수취확인</a></li>
+						<li><a href="/order_admin_a.do?os=4">수취확인</a></li>
 						</c:otherwise>
 					</c:choose>				
 					<c:choose>
 						<c:when test="${state.ORDER_STATE eq '5' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=5">거래완료</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=5">거래완료</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=5">거래완료</a></li>
+						<li><a href="/order_admin_a.do?os=5">거래완료</a></li>
 						</c:otherwise>
 					</c:choose>
 					</c:forEach>
@@ -155,50 +155,50 @@ function order_detail(no){
 				<c:forEach items="${order_state }" var="state" begin="0" end="0">
 					<c:choose>
 						<c:when test="${state eq '0' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=0">신규주문</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=0">신규주문</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=0">신규주문</a></li>
+						<li><a href="/order_admin_a.do?os=0">신규주문</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state eq '1' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=1">입금확인</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=1">입금확인</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=1">입금확인</a></li>
+						<li><a href="/order_admin_a.do?os=1">입금확인</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state eq '2' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=2">배송준비</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=2">배송준비</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=2">배송준비</a></li>
+						<li><a href="/order_admin_a.do?os=2">배송준비</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state eq '3' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=3">배송중</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=3">배송중</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=3">배송중</a></li>
+						<li><a href="/order_admin_a.do?os=3">배송중</a></li>
 						</c:otherwise>
 					</c:choose>
 					<c:choose>
 						<c:when test="${state eq '4' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=4">수취확인</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=4">수취확인</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=4">수취확인</a></li>
+						<li><a href="/order_admin_a.do?os=4">수취확인</a></li>
 						</c:otherwise>
 					</c:choose>				
 					<c:choose>
 						<c:when test="${state eq '5' }">
-						<li class="active"><a href="/stu/order_admin_a.do?os=5">거래완료</a></li>
+						<li class="active"><a href="/order_admin_a.do?os=5">거래완료</a></li>
 						</c:when>
 						<c:otherwise>
-						<li><a href="/stu/order_admin_a.do?os=5">거래완료</a></li>
+						<li><a href="/order_admin_a.do?os=5">거래완료</a></li>
 						</c:otherwise>
 					</c:choose>
 					</c:forEach>

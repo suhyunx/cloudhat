@@ -13,21 +13,21 @@
 <title>장바구니 목록</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <!-- Custom styles for this template -->
 <link href="css/dashboard.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="css/justified-nav.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
 <!-- 부가적인 테마 -->
-<link rel="stylesheet" href="/stu/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/stu/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
 
-<script src="/stu/js/common.js" charset="utf-8"></script>
+<script src="/js/common.js" charset="utf-8"></script>
 
 <style type="text/css">
 

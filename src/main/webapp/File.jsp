@@ -7,13 +7,13 @@
 <title>Insert title here</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
 <!-- 부가적인 테마 -->
-<link rel="stylesheet" href="/stu/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/stu/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
 
 </head>

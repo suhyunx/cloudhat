@@ -12,16 +12,16 @@
 <title>장바구니 목록</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="/stu/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
 <!-- 부가적인 테마 -->
-<link rel="stylesheet" href="/stu/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="/stu/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="/stu/js/common.js" charset="utf-8"></script>
+<script src="/js/common.js" charset="utf-8"></script>
 
 <style>
 
@@ -171,7 +171,7 @@ function fn_like(){
 		}
 	}else {
 		alert("로그인 후 이용해주세요.");
-		location.href = "/stu/loginForm.do";
+		location.href = "/loginForm.do";
 	}
 	
 	
@@ -221,7 +221,7 @@ function fn_select_order(){ //선택상품 주문
 
       <!-- tables -->
       <form id="commonForm" name="commonForm"></form>
-      	<form name="basket" method="post" action="/stu/order/basketAllOrderWrite.do">
+      	<form name="basket" method="post" action="/order/basketAllOrderWrite.do">
 		<input type="hidden" name="list" value="${list }">
 		</form>
 		
@@ -264,10 +264,10 @@ function fn_select_order(){ //선택상품 주문
                   				<input type="checkbox" name="chk" id="chk" value="${row.BASKET_NO }">
                   			</td>
                   			<td>
-                  				<img src='/stu/file/${row.GOODS_THUMBNAIL}' width="70px" height="70px">
+                  				<img src='/file/${row.GOODS_THUMBNAIL}' width="70px" height="70px">
                   			</td>
 							<td>
-				  				<a href="/stu/shop/goodsDetail.do?IDX=${row.GOODS_NO }">${row.GOODS_NAME }</a> <br>
+				  				<a href="/shop/goodsDetail.do?IDX=${row.GOODS_NO }">${row.GOODS_NAME }</a> <br>
 				  				색상: ${row.GOODS_ATT_COLOR } <br> 
 				  				사이즈:${row.GOODS_ATT_SIZE } <br>
 				  			</td>

@@ -261,10 +261,10 @@ h1 {
 <br>
 <div align="center">
 <ul class="bxslider">
-      <li><a href="#"><img src="../stu/img/메인이미지2.jpg" ></a></li>
-      <li><a href="#"><img src="../stu/img/메인이미지1.jpg" alt="" ></a></li>
-      <li><a href="#"><img src="../stu/img/메인이미지3.jpg" alt="" ></a></li>
-      <li><a href="#"><img src="../stu/img/메인이미지4.jpg" alt="" ></a></li>
+      <li><a href="#"><img src="../img/메인이미지2.jpg" ></a></li>
+      <li><a href="#"><img src="../img/메인이미지1.jpg" alt="" ></a></li>
+      <li><a href="#"><img src="../img/메인이미지3.jpg" alt="" ></a></li>
+      <li><a href="#"><img src="../img/메인이미지4.jpg" alt="" ></a></li>
 </ul>
 </div>
 
@@ -393,7 +393,7 @@ function fn_selectNewItemListCallback(data) {
 
 		var str = "";
 		$.each(data.NewList, function(key, value) {
-							var imgpath = "<img src='/stu/file/"+value.GOODS_THUMBNAIL+"' width='400' height='400'>"
+							var imgpath = "<img src='/file/"+value.GOODS_THUMBNAIL+"' width='400' height='400'>"
 
 							var imgpath1 = value.GOODS_IMAGE_STD.split(',');
 							var img0 = imgpath1[0];
@@ -434,8 +434,8 @@ function fn_selectNewItemListCallback(data) {
 							str +=    "<div class='card'>"
 								+	  "<a href='#this' name='title'>"
 								+	  "<div class='imgswap'>"
-								+ 	  "<img src='/stu/file/"+img0+"' width='400' height='400'>" 
-								+ 	  "<img src='/stu/file/"+img1+"' width='400' height='400'>"
+								+ 	  "<img src='/file/"+img0+"' width='400' height='400'>" 
+								+ 	  "<img src='/file/"+img1+"' width='400' height='400'>"
 								+     " </div> "
 								+     " <c:if test='${"+num+" ne "+pick1+"}'> "
 								+ 	  " <span style='background-color:#ff80bf; line-height: 27px; border-radius: 10px;'><font color='#ffffff' size='2'> "
@@ -503,7 +503,7 @@ function fn_selectBestItemListCallback(data) {
 
 		var str = "";
 		$.each(data.BestList, function(key, value) {
-							var imgpath = "<img src='/stu/file/"+value.GOODS_THUMBNAIL+"' width='400' height='400'>";
+							var imgpath = "<img src='/file/"+value.GOODS_THUMBNAIL+"' width='400' height='400'>";
 
 							var imgpath1 = value.GOODS_IMAGE_STD.split(',');
 							var img0 = imgpath1[0];
@@ -545,8 +545,8 @@ function fn_selectBestItemListCallback(data) {
 							str += "<div class='card'>"
 								+		"<a href='#this' name='title'>"
 								+		"<div class='imgswap'>"
-								+ 		"<img src='/stu/file/"+img0+"' width='400' height='400'>" 
-								+ 		"<img src='/stu/file/"+img1+"' width='400' height='400'>"
+								+ 		"<img src='/file/"+img0+"' width='400' height='400'>" 
+								+ 		"<img src='/file/"+img1+"' width='400' height='400'>"
 								+     " </div> "
 								+     " <c:if test='${"+num+" ne "+pick1+"}'> "
 								+ 	  " <span style='background-color:#ff80bf; line-height: 27px; border-radius: 10px;'><font color='#ffffff' size='2'> "

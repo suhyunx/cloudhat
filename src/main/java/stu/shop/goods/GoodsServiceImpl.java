@@ -86,16 +86,16 @@ public class GoodsServiceImpl implements GoodsService {
 				String img_list[] = {}; // ','로 구분된 문자열을 나눠서 배열에 담음
 				String img_thumb=""; // img_list의 첫번째 경로를 저장함
 				String img_thumb1=""; // img_list의 첫번째 경로를 저장함
-				String comp_text=" src=\"/stu/file/"; // 반복문 안에 temp와 비교될 텍스느. equals(" src=\"")는 안되길래 따로 빼둠
+				String comp_text=" src=\"/file/"; // 반복문 안에 temp와 비교될 텍스느. equals(" src=\"")는 안되길래 따로 빼둠
 				System.out.println("comp_text="+comp_text);
 				String content = (String)map.get("GOODS_CONTENT"); // 저장된 본문을 불러옴
 				int imgCount = 0;  // src="D:\sts4File\     
-				for(int i = 0; i+16 < content.length(); i++) { // 텍스트 비교
+				for(int i = 0; i+12 < content.length(); i++) { // 텍스트 비교
 					String temp=""; // 잘라진 텍스트가 임시로 들어갈 공간
 					
-					temp = content.substring(i,i+16); // content에서 잘라낸 텍스트를 temp에 저장
+					temp = content.substring(i,i+12); // content에서 잘라낸 텍스트를 temp에 저장
 					if(temp.equals(comp_text)) { // temp와 temp_text가 같을 경우
-						img_templist += content.substring(i+16, i+52)+","; // img_list에 잘라진 텍스트 추가 및 구분을 위한 쉼표 삽입
+						img_templist += content.substring(i+12, i+48)+","; // img_list에 잘라진 텍스트 추가 및 구분을 위한 쉼표 삽입
 						System.out.println("img_templist = " + img_templist);
 						imgCount++;
 					}
@@ -106,9 +106,13 @@ public class GoodsServiceImpl implements GoodsService {
 				if(img_templist!="") { // img_list가 비어있지 않을 경우			
 					img_templist = img_templist.substring(0, img_templist.length()-1); // 경로 뒤에 남는 쉼표 제거
 					img_thumb = img_templist.substring(0, 36); // 이미지가 있을 경우 첫번째 경로를 썸네일로 저장해줌
+					System.out.println("jm_img_templist"+img_templist);
+					System.out.println("jm_img_thumb"+img_thumb);
 					map.put("GOODS_THUMBNAIL", img_thumb); // 썸네일 값 전달
 				} else { // img_list가 비어이을 경우
 					map.put("GOODS_THUMBNAIL",""); // 이미지 없음
+					System.out.println("없음");
+
 				}
 				// 내용에서 이미지 긁어오기 끝
 				
@@ -131,6 +135,7 @@ public class GoodsServiceImpl implements GoodsService {
 					System.out.println("img_result!!!!!!!= "+img_result);
 					
 					map.put("UPLOAD_SAVE_NAME", img_result.substring(0, img_result.length()-1));
+					System.out.println("jm_img_result"+img_result);
 					goodsDao.insertFile(map);
 				}
 				
@@ -171,7 +176,7 @@ public class GoodsServiceImpl implements GoodsService {
 		String img_templist=""; // 이미지 링크를 ','를 기준으로 냐열해둠, 아직 사용 안함
 		String img_list[] = {}; // ','로 구분된 문자열을 나눠서 배열에 담음
 		String img_thumb=""; // img_list의 첫번째 경로를 저장함
-		String comp_text=" src=\"/stu/file/"; // 반복문 안에 temp와 비교될 텍스느. equals(" src=\"")는 안되길래 따로 빼둠
+		String comp_text=" src=\"/file/"; // 반복문 안에 temp와 비교될 텍스느. equals(" src=\"")는 안되길래 따로 빼둠
 		System.out.println("comp_text="+comp_text);
 		String content = (String)map.get("GOODS_CONTENT"); // 저장된 본문을 불러옴
 		int imgCount = 0;  // src="D:\sts4File\      " src=\"/nnS/file/";
@@ -189,6 +194,7 @@ public class GoodsServiceImpl implements GoodsService {
 		if(img_templist!="") { // img_list가 비어있지 않을 경우			
 			img_templist = img_templist.substring(0, img_templist.length()-1); // 경로 뒤에 남는 쉼표 제거
 			img_thumb = img_templist.substring(0, 36); // 이미지가 있을 경우 첫번째 경로를 썸네일로 저장해줌
+
 			map.put("GOODS_THUMBNAIL", img_thumb); // 썸네일 값 전달
 		} else { // img_list가 비어이을 경우
 			map.put("GOODS_THUMBNAIL",""); // 이미지 없음
@@ -361,7 +367,7 @@ public class GoodsServiceImpl implements GoodsService {
 		String img_templist=""; // 이미지 링크를 ','를 기준으로 냐열해둠, 아직 사용 안함
 		String img_list[] = {}; // ','로 구분된 문자열을 나눠서 배열에 담음
 		String img_thumb=""; // img_list의 첫번째 경로를 저장함
-		String comp_text=" src=\"/stu/file/"; // 반복문 안에 temp와 비교될 텍스느. equals(" src=\"")는 안되길래 따로 빼둠
+		String comp_text=" src=\"/file/"; // 반복문 안에 temp와 비교될 텍스느. equals(" src=\"")는 안되길래 따로 빼둠
 		System.out.println("comp_text="+comp_text);
 		String content = (String)map.get("REVIEW_CONTENT"); // 저장된 본문을 불러옴
 		int imgCount = 0;  // src="D:\sts4File\      " src=\"/nnS/file/";

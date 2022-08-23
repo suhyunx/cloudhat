@@ -45,7 +45,7 @@
 	<p align="center"
 		style="font-size: 15px; margin-left: 600px; color: red;">* 필수입력</p>
 	<form onsubmit="return checkz()" name="frm" id="frm" method="post"
-		action="/stu/joinAction.do">
+		action="/joinAction.do">
 		<table align="center" cellspacing="10" width="600"
 			style="margin: auto;">
 			<input type="hidden" name="member_no">
@@ -284,7 +284,7 @@
 $("input[name=MEMBER_ID]").blur(function(){
 	var MEMBER_ID = $(this).val().trim();
 	var p = $(this).parent();
-	$.post("/stu/selectIdCheck.do",{MEMBER_ID:MEMBER_ID},function(data){
+	$.post("/selectIdCheck.do",{MEMBER_ID:MEMBER_ID},function(data){
 		 if (!MEMBER_ID){
 			$(".alert",p).removeClass("alert-positive").addClass("alert-negative").html("");
 			//$("input[name=chkid]").val("");

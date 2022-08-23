@@ -14,7 +14,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 가입</title>
-<link rel="stylesheet" href="/stu/css/login.css">
+<link rel="stylesheet" href="/css/login.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
 <script src="<c:url value='/js/common.js'/>" charset="utf-8"></script>
@@ -57,7 +57,7 @@
 <div class="container">
 <%@include file="/WEB-INF/tiles/mySide.jsp" %>
 	<div id="memberModify">
-		<form id="signUp" method="post" action="/stu/my/memberModifyAction.do">
+		<form id="signUp" method="post" action="/my/memberModifyAction.do">
 			<h3 class="contents">회원정보수정</h3>
 			<div class="myForm-group">
 				<div class="form-group">

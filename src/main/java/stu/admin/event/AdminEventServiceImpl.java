@@ -44,7 +44,7 @@ public class AdminEventServiceImpl implements AdminEventService{
 		// GoodsServiceImpl에서 차용해옴
 		String img_templist = ""; // 이미지 링크를 ','를 기준으로 냐열해둠, 아직 사용 안함
 		String img_thumb = ""; // img_list의 첫번째 경로를 저장함
-		String comp_text = " src=\"/stu/file/"; // 반복문 안에 temp와 비교될 텍스느. equals(" src=\"")는 안되길래 따로 빼둠
+		String comp_text = " src=\"/file/"; // 반복문 안에 temp와 비교될 텍스느. equals(" src=\"")는 안되길래 따로 빼둠
 		String content = (String)map.get("EVENT_CONTENT"); // 저장된 본문을 불러옴
 		String type = (String)map.get("TYPE");
 		int imgCount = 0;  // src="D:\sts4File\      " src=\"/nnS/file/";

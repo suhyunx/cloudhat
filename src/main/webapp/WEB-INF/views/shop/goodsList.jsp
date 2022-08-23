@@ -222,8 +222,8 @@ h1 {
 			<a href="#this" name="title">
 			<c:set var="IMG" value="${fn:split(list.GOODS_IMAGE_STD,',')}"/>
 			<div class="imgswap"> 
-			<img src="/stu/file/${IMG[0]}" width="400" height="400"> 
-			<img src="/stu/file/${IMG[1]}" width="400" height="400">
+			<img src="/file/${IMG[0]}" width="400" height="400"> 
+			<img src="/file/${IMG[1]}" width="400" height="400">
 		    </div>
 			<c:set var="PICK" value="${fn:split(list.GOODS_PICK,',')}"/>
 			<c:forEach var="PICK1" items="${PICK}" varStatus="g">

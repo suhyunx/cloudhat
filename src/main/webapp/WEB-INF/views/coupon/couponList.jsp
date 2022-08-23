@@ -235,7 +235,7 @@ function fn_listCallBack(data){
 					+ "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>" + value.COUPON_S_VALIDITY +"&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;"+ value.COUPON_E_VALIDITY + "</td>"
 				    + "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>" + value.COUPON_STATE + "</td>"
 				    + "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>"
-				    	+ "<a href='#this' name='copy'><img src='/stu/img/copy.jpg' width='30px' height='30px' border='0' alt='right'></a>"
+				    	+ "<a href='#this' name='copy'><img src='/img/copy.jpg' width='30px' height='30px' border='0' alt='right'></a>"
 				    	+ "<input type='hidden' id='COUPON_NO' value='"+value.COUPON_NO+"'>"
 				    + "</td>"
 			    + "</tr>";
@@ -264,7 +264,7 @@ function fn_listCallBack(data){
 //클립보드로 복사하는 기능을 생성
 function fn_copy(obj) {
 	var emptyInput = document.createElement("input"); // input 생성
-	var no = "/stu/couponSave.do?COUPON_NO="
+	var no = "/couponSave.do?COUPON_NO="
 	no += obj.parent().find("#COUPON_NO").val();
 	
 	emptyInput.setAttribute("value", no); // 값 할당
