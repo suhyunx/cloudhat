@@ -314,14 +314,14 @@ $(document).ready(function() {
 	fn_selectGoodsList(1);
 	
 	$("a[name='title']").on("click", function(e){ //제목 //name 이 title인거
-		console.log("잘들어옴");
+		//console.log("잘들어옴");
 		e.preventDefault();
 		fn_openBoardDetail($(this));
 	});
 });
 
 function fn_openBoardDetail(obj) {
-	console.log("잘들어옴22");
+	//console.log("잘들어옴22");
 	var comSubmit = new ComSubmit(); // 객체생성
 	comSubmit.setUrl("<c:url value='/shop/goodsDetail.do' />"); // url설정
 	comSubmit.addParam("IDX", obj.parent().find("#IDX").val()); // IDX; id로 값을넘김
@@ -339,7 +339,7 @@ function fn_selectGoodsList(pageNo) {
 	comAjax.addParam("PAGE_ROW", 16);
 	comAjax.addParam("keyword", $('#keyword').val());
 	comAjax.ajax();
-	alert('#keyword');
+	//alert('#keyword');
 }
 
 function fn_selectGoodsListCallback(data) {
