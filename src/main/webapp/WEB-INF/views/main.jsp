@@ -261,10 +261,10 @@ h1 {
 <br>
 <div align="center">
 <ul class="bxslider">
-      <li><a href="#"><img src="../img/메인이미지2.jpg" ></a></li>
-      <li><a href="#"><img src="../img/메인이미지1.jpg" alt="" ></a></li>
-      <li><a href="#"><img src="../img/메인이미지3.jpg" alt="" ></a></li>
-      <li><a href="#"><img src="../img/메인이미지4.jpg" alt="" ></a></li>
+      <li><a href="#"><img src="../img/main2.jpg" ></a></li>
+      <li><a href="#"><img src="../img/main1.jpg" alt="" ></a></li>
+      <li><a href="#"><img src="../img/main3.jpg" alt="" ></a></li>
+      <li><a href="#"><img src="../img/main4.jpg" alt="" ></a></li>
 </ul>
 </div>
 
