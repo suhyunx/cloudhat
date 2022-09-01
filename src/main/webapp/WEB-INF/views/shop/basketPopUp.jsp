@@ -60,7 +60,7 @@ display: inline-block;
 		<p class="font">선택한 상품이 장바구니에 담겼습니다.</p>
 	</tr>
 	<tr>
-		<td><img src="/img/장바구니.png" height="84px" ></td>
+		<td><img src="/img/cart.png" height="84px" ></td>
 	</tr>
 </table>
 	<span class="btn_1" onClick="cart_close();">쇼핑계속하기</span>
