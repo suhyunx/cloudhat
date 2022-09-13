@@ -47,6 +47,7 @@ public class EditorContorller {
 					String uploadPath = req.getSession().getServletContext().getRealPath("/file"); //톰캣서버 경로
 					System.out.println("uploadPath="+uploadPath);
 					File uploadFile = new File(uploadPath);
+
 					
 					System.out.println("uploadFile"+uploadFile);
 					if(!uploadFile.exists()){
