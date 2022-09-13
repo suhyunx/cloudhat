@@ -200,7 +200,7 @@ function fn_couponList(pageNo)	{ //pageNo : 호출하고자 하는 페이지 번
 function fn_listCallBack(data){
 	var total = data.TOTAL;
 	var body = $("table[name='couponList'] > tbody");
-	
+
 	body.empty();
 	if(total == 0){
 		var params = {
@@ -214,6 +214,7 @@ function fn_listCallBack(data){
 		var str = "<tr><td colspan='6'>조회된 결과가 없습니다.</td></tr>";
 		body.append(str);
 	}else{
+		console.log(data);
 		var params = {
 			divId : "PAGE_NAVI",
 			pageIndex : "PAGE_INDEX",
@@ -222,7 +223,7 @@ function fn_listCallBack(data){
 			recordCount : 10
 		};
 		gfn_renderPaging(params);
-	var str = "";
+		var str = "";
 		$.each(data.list, function(key, value){
 			str += "<tr>"
 					+ "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle;'>" + value.RNUM + "</td>"
