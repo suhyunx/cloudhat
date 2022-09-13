@@ -29,6 +29,12 @@
 		</div>
 		<div class="sidebar-nav navbar-collapse" style="width:180px;">
 			<ul class="nav" id="side-menu">
+
+				<li><a href="/serverCheck.do"
+					   style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
+					<b class="fa fa-dashboard fa-fw">서버관리</b> 
+				</a></li>
+
 				<li><a href="/main.do" style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 						<b class="fa fa-dashboard fa-fw">쇼핑몰로 이동</b> 
 				</a></li>
@@ -91,10 +97,7 @@
 					</ul>
 				</li>
 				<!-- e 이벤트 추가 2020.06.30 -->
-				<li><a href="/serverCheck.do"
-					   style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
-					<b class="fa fa-dashboard fa-fw">서버관리</b> 
-				</a></li>
+
 				
 			</ul>
 		</div>
