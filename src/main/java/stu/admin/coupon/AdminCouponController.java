@@ -114,12 +114,12 @@ public class AdminCouponController {
 
 	@RequestMapping(value = "/adminServer.do")
 	@ResponseBody
-	public ModelAndView server() throws Exception {
+	public ModelAndView server(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		ModelAndView mv = new ModelAndView("jsonView");
 		String NEXT_COUPON_NO = adminCouponService.couponNextVal();
 
-		String cmd = "ls -al"; //명령어 리퀘스트 처리
-		String[] command = {"/bin/sh","-c",cmd};
+		String ping = req.getParameter("ping"); //명령어 리퀘스트 처리
+		String[] command = {"/bin/sh","-c","ping",ping};
 		StringBuffer sb = null;
 		try
 		{
@@ -131,6 +131,7 @@ public class AdminCouponController {
 			while ((line = reader.readLine()) != null)
 			{
 				sb.append(line);
+				sb.append("<br>");
 			}
 		}
 		catch (Exception e)
@@ -138,7 +139,7 @@ public class AdminCouponController {
 
 		}
 
-		mv.addObject("NEXT_COUPON_NO", sb.toString());
+		mv.addObject("out", sb.toString());
 		return mv;
 	}
 	// end

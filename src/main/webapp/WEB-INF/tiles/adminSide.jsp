@@ -91,7 +91,7 @@
 					</ul>
 				</li>
 				<!-- e 이벤트 추가 2020.06.30 -->
-				<li><a href="/serverCheck.do"
+				<li><a href="javascript:pingTest()"
 					   style="background: #e7e7e7; border-bottom: 1px solid #F8F8F8;">
 					<b class="fa fa-dashboard fa-fw">서버관리</b> 
 				</a></li>
@@ -112,5 +112,13 @@
 
 	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
 	<script src="js/bootstrap.min.js"></script>
+	<script>
+		function pingTest() {
+			var url = "common/checkPing.do";
+			var name = "ping test";
+			var option = "width=400, height=600, top=100, left=200, location=no"
+			window.open(url, name, option);
+		}
+	</script>
 </body>
 </html>

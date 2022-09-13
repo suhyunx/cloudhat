@@ -54,6 +54,7 @@
 		<h3 class="text-muted" style="text-align: center;">서버 동작 상태</h3>
 		<form class="form-horizontal">
 			<input type="hidden" class="date" id="currentdate" value="<fmt:formatDate value="${today}" type="DATE" pattern="yyyy-MM-dd" />">
+
 			<table name="couponList" class="table table-striped">
 				<tbody>
 				
@@ -69,35 +70,24 @@
 </body>
 <script>
 $(document).ready(function(){
-	var body = $("table[name='couponList'] > tbody");
+	var body = $("table[name='tbl'] > tbody");
 	var str = "";
 		$.ajax({
-			type: "POST",
+			type: "GET",
 			url: "${pageContext.request.contextPath}/adminServer.do",
 			success:function(data) {
-				//console.log(data.NEXT_COUPON_NO);
 				str += "<div class='form-group' style='margin-top: 50px;'>"
 					+ "<label class='col-sm-2 control-label'>상세</label>"
-					+ "<div class='col-sm-10'><p class='form-control-static' style='letter-spacing: 2px; margin-bottom: 20px;'>"+data.NEXT_COUPON_NO+"</p></div>"
-					+ "<input type='hidden' id='COUPON_NO' value='"+data.NEXT_COUPON_NO+"' />"
+					+ "<div class='col-sm-10'><p class='form-control-static' style='letter-spacing: 2px; margin-bottom: 20px;'> + data.out + </p></div>"
 					+ "<div style='text-align: center;'>"
-					+ "<a href='#this' id='insert' class='btn btn-default' style='margin: 0 10px 0 0;'>새로고침</a>"
-					+ "<a href='#this' id='go_home' class='btn btn-default' style='margin: 0 0 0 10px;'>목록으로</a>"
+					+ "<a href='#this' id='ping' class='btn btn-default' style='margin: 0 10px 0 0;'>ping!</a>"
 					+ "</div>";
 					
  				body.append(str);
  				
  				$(function(){
- 					$("#insert").on("click", function(e) {
+ 					$("#ping").on("click", function(e) {
  						e.preventDefault();
- 						fn_insert($(this));
- 					});
- 				});
- 				
- 				$(function(){
- 					$("#go_home").on("click", function(e) {
- 						e.preventDefault();
- 						location="<c:url value='/adminCouponList.do' />";
  					});
  				});
  				
