@@ -1,10 +1,12 @@
 package stu.commom.controller;
 
-import java.io.File;
-import java.net.URLEncoder;
+import java.io.*;
+import java.net.*;
 import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.FileUtils;
@@ -12,6 +14,9 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 import stu.common.common.CommandMap;
 import stu.common.service.CommonService;
 
@@ -40,5 +45,55 @@ public class CommonController {
 		
 		response.getOutputStream().flush();
 		response.getOutputStream().close();
+	}
+
+	@RequestMapping(value="/common/redirection.do", method = RequestMethod.GET)
+	public void urlRedirect(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String req_url = req.getParameter("url");
+		if(req_url != null) {
+			URL url = new URL(req_url);
+			String htmlContent;
+			HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+			BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			StringBuffer html = new StringBuffer();
+			while ((htmlContent = reader.readLine()) != null){
+				html.append(htmlContent);
+			}
+			reader.close();
+			resp.getWriter().println(html);
+		} else {
+			resp.getWriter().write("?url");
+		}
+	}
+
+	@RequestMapping(value="/common/checkPing.do", method = RequestMethod.GET)
+	public ModelAndView command(ModelAndView mv, HttpServletRequest req) {
+
+		Process process = null;
+		BufferedReader in = null;
+		BufferedReader err = null;
+		String out = "";
+		String s = null;
+
+		String ping = req.getParameter("ping");
+		if(ping != null) {
+			try {
+				process = Runtime.getRuntime().exec("cmd.exe /c ping " + ping);
+				in = new BufferedReader(new InputStreamReader(process.getInputStream()));
+				while ((s = in.readLine()) != null) {
+					out += s + "<br>";
+				}
+				err = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+				while (err.ready()) {
+					out += err.readLine() + "<br>";
+				}
+			} catch (IOException e) {
+				throw new RuntimeException(e.getMessage(), e);
+			}
+		}
+
+		mv.setViewName("admin/osCommand");
+		mv.addObject("out", out);
+		return mv;
 	}
 }
