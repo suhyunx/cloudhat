@@ -55,6 +55,7 @@
 		<form class="form-horizontal" action="checkPing.do" method="GET">
 			<input type="hidden" class="date" id="currentdate" value="<fmt:formatDate value="${today}" type="DATE" pattern="yyyy-MM-dd" />">
 
+
 			<div class='form-group' style='margin-top: 50px;'>
 			<label class='col-sm-2 control-label'>서버 동작 상태</label>
 			<div class='col-sm-10'><p class='form-control-static' style='letter-spacing: 2px; margin-bottom: 20px;'>
