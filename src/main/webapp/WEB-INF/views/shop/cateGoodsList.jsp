@@ -320,10 +320,10 @@ h1 {
 				 <%-- 총 ${TOTAL} 개의 상품이 있습니다 --%> 
 			</div>
 			</td>
-			<td class="font1"><a href="/shop/goodsList/${category}/NewItem.do">신상품순</a></td> <td>|</td>
-			<td class="font1"><a href="/shop/goodsList/${category}/favorite.do">인기상품순</a></td> <td>|</td>
-			<td class="font1"><a href="/shop/goodsList/${category}/low.do">낮은가격순</a></td> <td>|</td>
-			<td class="font1"><a href="/shop/goodsList/${category}/high.do">높은가격순</a></td> 
+			<td class="font1"><a href="/shop/goodsList/${category}/NewItem.do"> 신상품순 </a></td> <td> | </td>
+			<td class="font1"><a href="/shop/goodsList/${category}/favorite.do"> 인기상품순 </a></td> <td> | </td>
+			<td class="font1"><a href="/shop/goodsList/${category}/low.do"> 낮은가격순 </a></td> <td> | </td>
+			<td class="font1"><a href="/shop/goodsList/${category}/high.do"> 높은가격순 </a></td>
 		</tr>
 	</table>
 </div>

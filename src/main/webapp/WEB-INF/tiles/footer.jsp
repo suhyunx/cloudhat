@@ -77,18 +77,19 @@
 			<!-- BANK ACCOUNT -->
 
 			<!-- BOARD -->
-<%--			<div class="group board">--%>
-<%--				<h4>BOARD</h4>--%>
-<%--				<div class="con">--%>
-<%--					<ul>--%>
-<%--						<!--<li><a href="/cscenter/consultReg.asp"><span>1:1문의</span></a></li>-->--%>
-<%--						<li><a href="#"><span>문의게시판</span></a></li>--%>
-<%--						<li><a href="#"><span>FAQ</span></a></li>--%>
+			<div class="group board">
+				<h4>BOARD</h4>
+				<div class="con">
+					<ul>
+						<!--<li><a href="/cscenter/consultReg.asp"><span>1:1문의</span></a></li>-->
+						<li><a href="/notice/openNoticeList.do"><span>공지사항</span></a></li>
+						<li><a href="/qna/openQnaList.do"><span>문의게시판</span></a></li>
+						<li><a href="/faq/openFaqList.do"><span>FAQ</span></a></li>
 <%--						<li><a href="#"><span>이용약관</span></a></li>--%>
 <%--						<li><a href="#"><span>개인정보처리방침</span></a></li>--%>
-<%--					</ul>--%>
-<%--				</div>--%>
-<%--			</div>--%>
+					</ul>
+				</div>
+			</div>
 			<!-- BOARD -->
 			
 		</div>

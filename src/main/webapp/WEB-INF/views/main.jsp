@@ -257,14 +257,13 @@ h1 {
 
 </head>
 <body>
-
 <br>
 <div align="center">
 <ul class="bxslider">
-      <li><a href="#"><img src="../img/main2.jpg" ></a></li>
-      <li><a href="#"><img src="../img/main1.jpg" alt="" ></a></li>
-      <li><a href="#"><img src="../img/main3.jpg" alt="" ></a></li>
-      <li><a href="#"><img src="../img/main4.jpg" alt="" ></a></li>
+<%--      <li><a href="#"><img src="../img/main2.jpg" ></a></li>--%>
+      <li><a href="#"><img src="../img/spot1.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../img/spot2.jpg" alt=""></a></li>
+      <li><a href="#"><img src="../img/spot3.jpg" alt=""></a></li>
 </ul>
 </div>
 
@@ -332,12 +331,12 @@ $(document).ready(function () {
     $('.bxslider').bxSlider({
         auto: true, // 자동으로 애니메이션 시작
         speed: 500,  // 애니메이션 속도
-        pause: 3000,  // 애니메이션 유지 시간 (1000은 1초)
+        pause: 5000,  // 애니메이션 유지 시간 (1000은 1초)
         mode: 'horizontal', // 슬라이드 모드 ('fade', 'horizontal', 'vertical' 이 있음)
         autoControls: false, // 시작 및 중지버튼 보여짐
         pager: true, // 페이지 표시 보여짐
         captions: true, // 이미지 위에 텍스트를 넣을 수 있음
-        slideWidth: 1260, // 크기
+        slideWidth: 1500, // 크기
         slideMargin: 0,
         autoDelay: 0,
         responsive: true,

@@ -125,6 +125,7 @@ li {
 }
 
 #search51:focus{
+	color:#0f0f0f;
     width:200px;
     outline:0;
 }
@@ -135,7 +136,7 @@ li {
 <div class="header">
 <div class="pagetop">
 
-<div align="right" style="margin-right:100px">
+<div align="right" style="margin-right:100px; margin-top: 5px">
 <form name="frm">
 	
 		<tr>
@@ -156,8 +157,8 @@ li {
 					<td><a href="/event/list.do">이벤트</a></td> <td> | </td>
 				</c:otherwise>
 			</c:choose>
-			
-			
+
+
 			<td><a href="/faq/openFaqList.do">고객센터</a></td> <td> | </td>
 		</tr>
 	
@@ -178,8 +179,10 @@ li {
 
 <!-- 메뉴 -->
 <div class="pagemid">
-  <div class="wrapper2">
-   <I><h1><a href="/main.do">JM COLLECTION</a></h1></I>
+  <div class="wrapper2" style="text-align: center">
+	  <a href="/main.do"><img src="/img/test4.png" style="width : 30%; height: 30%;" ></a>
+<%--   <I><h1><a href="/main.do">JM COLLECTION</a></h1></I>--%>
+
     <ul class="flex-menu">
       <li>&nbsp;</li>
       <li><a href="/shop/bestGoodsList.do">BEST</a></li>
